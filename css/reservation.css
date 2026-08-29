@@ -1,0 +1,1042 @@
+/* =========================================================
+   CAFFEINE & COVE
+   RESERVATION PAGE
+========================================================= */
+
+:root {
+
+    --reservation-cream: #f8f1e8;
+    --reservation-light: #fffaf4;
+    --reservation-white: #fffdf9;
+
+    --reservation-brown: #80502f;
+    --reservation-dark: #5d351c;
+
+    --reservation-text: #302017;
+    --reservation-muted: #75675d;
+
+    --reservation-border: #dfd1c2;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.reservation-page,
+.reservation-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.reservation-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 370px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        url("../img/reservation-hero.jpg")
+        center center / cover no-repeat;
+
+}
+
+
+.reservation-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(32, 20, 12, 0.48);
+
+}
+
+
+.reservation-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(650px, 90%);
+
+    text-align: center;
+
+    color: #ffffff;
+
+}
+
+
+.reservation-hero-icon {
+
+    margin-bottom: 5px;
+
+    color: #d2a06a;
+
+    font-size: 34px;
+
+}
+
+
+.reservation-hero h1 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 54px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+}
+
+
+.reservation-divider {
+
+    margin: 16px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+}
+
+
+.reservation-divider span {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #d0a06d;
+
+}
+
+
+.reservation-divider b {
+
+    color: #d0a06d;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+}
+
+
+.reservation-hero p {
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   RESERVATION SECTION
+========================================================= */
+
+.reservation-section {
+
+    padding: 55px 25px 75px;
+
+    background: var(--reservation-cream);
+
+}
+
+
+.reservation-container {
+
+    width: min(1120px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.78fr 1.22fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+========================================================= */
+
+.reservation-info {
+
+    padding: 10px 18px;
+
+}
+
+
+.reservation-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--reservation-brown);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.reservation-info h2 {
+
+    margin: 0;
+
+    color: var(--reservation-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 39px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+}
+
+
+.reservation-small-divider {
+
+    margin: 19px 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+.reservation-small-divider span {
+
+    width: 50px;
+
+    height: 1px;
+
+    background: #c9b09a;
+
+}
+
+
+.reservation-small-divider b {
+
+    color: var(--reservation-brown);
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+}
+
+
+.reservation-intro {
+
+    max-width: 390px;
+
+    margin: 0 0 32px;
+
+    color: var(--reservation-muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.reservation-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+.feature-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--reservation-brown);
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+}
+
+
+.reservation-feature h3 {
+
+    margin: 0 0 3px;
+
+    color: var(--reservation-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.reservation-feature p {
+
+    margin: 0;
+
+    color: var(--reservation-muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.reservation-form-card {
+
+    padding: 30px;
+
+    background: var(--reservation-white);
+
+    border: 1px solid var(--reservation-border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 35px rgba(64, 42, 28, 0.05);
+
+}
+
+
+.reservation-form-heading {
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+}
+
+
+.reservation-form-heading h2 {
+
+    margin: 0;
+
+    color: var(--reservation-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+}
+
+
+.form-divider {
+
+    margin: 12px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+}
+
+
+.form-divider span {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #c9b09a;
+
+}
+
+
+.form-divider b {
+
+    color: var(--reservation-brown);
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.reservation-form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+}
+
+
+.reservation-field {
+
+    min-width: 0;
+
+}
+
+
+.reservation-full {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.reservation-field label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--reservation-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.reservation-field label span {
+
+    color: #8e7b6d;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.reservation-input {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+.reservation-input > span {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    color: #8b796b;
+
+    font-size: 14px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+}
+
+
+.reservation-input input,
+.reservation-input select {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding:
+        0
+        14px
+        0
+        41px;
+
+    border: 1px solid var(--reservation-border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fffefa;
+
+    color: var(--reservation-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.reservation-input input:focus,
+.reservation-input select:focus {
+
+    border-color: var(--reservation-brown);
+
+    box-shadow:
+        0 0 0 3px rgba(128, 80, 47, 0.07);
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.reservation-textarea {
+
+    position: relative;
+
+}
+
+
+.reservation-textarea > span {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 14px;
+
+    color: #8b796b;
+
+    font-size: 14px;
+
+}
+
+
+.reservation-textarea textarea {
+
+    width: 100%;
+
+    min-height: 83px;
+
+    padding:
+        13px
+        14px
+        13px
+        41px;
+
+    resize: vertical;
+
+    border: 1px solid var(--reservation-border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fffefa;
+
+    color: var(--reservation-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+
+.reservation-textarea textarea:focus {
+
+    border-color: var(--reservation-brown);
+
+    box-shadow:
+        0 0 0 3px rgba(128, 80, 47, 0.07);
+
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.reservation-submit {
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    height: 49px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--reservation-brown);
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+
+}
+
+
+.reservation-submit:hover {
+
+    background: var(--reservation-dark);
+
+    transform: translateY(-1px);
+
+}
+
+
+.reservation-submit span {
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.reservation-experience {
+
+    padding:
+        0
+        25px
+        70px;
+
+    background: var(--reservation-cream);
+
+}
+
+
+.experience-container {
+
+    width: min(1120px, 100%);
+
+    min-height: 250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #f3e7da;
+
+}
+
+
+.experience-image {
+
+    min-height: 250px;
+
+}
+
+
+.experience-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+.experience-content {
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.experience-content > span {
+
+    color: var(--reservation-brown);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.experience-content h2 {
+
+    margin: 9px 0 0;
+
+    color: var(--reservation-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 31px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+}
+
+
+.experience-divider {
+
+    margin: 14px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.experience-divider span {
+
+    width: 48px;
+
+    height: 1px;
+
+    background: #c9b09a;
+
+}
+
+
+.experience-divider b {
+
+    color: var(--reservation-brown);
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+}
+
+
+.experience-content p {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    color: var(--reservation-muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .reservation-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 720px;
+
+        gap: 40px;
+
+    }
+
+
+    .reservation-info {
+
+        text-align: center;
+
+    }
+
+
+    .reservation-label {
+
+        text-align: center;
+
+    }
+
+
+    .reservation-small-divider {
+
+        justify-content: center;
+
+    }
+
+
+    .reservation-intro {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .reservation-feature {
+
+        justify-content: center;
+
+        text-align: left;
+
+    }
+
+
+    .experience-container {
+
+        max-width: 720px;
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .experience-image {
+
+        min-height: 280px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .reservation-hero {
+
+        height: 280px;
+
+    }
+
+
+    .reservation-hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .reservation-hero p {
+
+        padding: 0 20px;
+
+        font-size: 13px;
+
+    }
+
+
+    .reservation-section {
+
+        padding:
+            40px 15px
+            55px;
+
+    }
+
+
+    .reservation-info {
+
+        padding: 0;
+
+    }
+
+
+    .reservation-info h2 {
+
+        font-size: 31px;
+
+    }
+
+
+    .reservation-form-card {
+
+        padding:
+            22px
+            18px;
+
+    }
+
+
+    .reservation-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .reservation-full {
+
+        grid-column: auto;
+
+    }
+
+
+    .reservation-submit {
+
+        grid-column: auto;
+
+    }
+
+
+    .reservation-experience {
+
+        padding:
+            0
+            15px
+            55px;
+
+    }
+
+
+    .experience-content {
+
+        padding:
+            32px
+            20px;
+
+    }
+
+
+    .experience-content h2 {
+
+        font-size: 27px;
+
+    }
+
+}

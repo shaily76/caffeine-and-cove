@@ -1,0 +1,482 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN - MANAGE MENU CSS
+   Sidebar styles are handled by sidebar.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f1e9;
+    color: #3f2417;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.admin-main {
+    margin-left: 260px;
+    min-height: 100vh;
+    padding: 45px 50px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+
+.page-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #a85e31;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.page-header h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #3f2417;
+    margin-bottom: 8px;
+}
+
+
+.page-description {
+    color: #806858;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ADD PRODUCT BUTTON
+========================================================= */
+
+.add-product-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #6f3f22;
+    color: #ffffff;
+    padding: 15px 23px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+
+.add-product-btn:hover {
+    background: #4f2c1a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MENU SECTION
+========================================================= */
+
+.menu-section {
+    background: #fffdf9;
+    border: 1px solid #eadbcd;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(70, 40, 20, 0.06);
+}
+
+
+/* =========================================================
+   SECTION TOP
+========================================================= */
+
+.section-top {
+    padding: 25px 30px;
+    border-bottom: 1px solid #eadbcd;
+}
+
+
+.section-top h2 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    color: #3f2417;
+    margin-bottom: 6px;
+}
+
+
+.section-top p {
+    color: #806858;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   PRODUCT TABLE
+========================================================= */
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+
+.product-table thead {
+    background: #f6eee6;
+}
+
+
+.product-table th {
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #745541;
+    white-space: nowrap;
+}
+
+
+.product-table td {
+    padding: 18px 20px;
+    border-top: 1px solid #eee1d5;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+
+.product-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+
+.product-table tbody tr:hover {
+    background: #fff8f1;
+}
+
+
+/* =========================================================
+   PRODUCT ID
+========================================================= */
+
+.product-id {
+    color: #96725b;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 250px;
+}
+
+
+.product-image {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #eadbcd;
+    background: #f4e7da;
+    flex-shrink: 0;
+}
+
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    color: #3f2417;
+    margin-bottom: 5px;
+}
+
+
+.product-info p {
+    color: #8b7566;
+    font-size: 12px;
+    max-width: 240px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #f2e3d5;
+    color: #754526;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price {
+    font-weight: bold;
+    color: #6f3f22;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.status.active {
+    background: #e4f3e7;
+    color: #28733a;
+}
+
+
+.status.inactive {
+    background: #f7dddd;
+    color: #a33a3a;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.date {
+    color: #806858;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+
+.action-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.edit-btn {
+    background: #f0e1d2;
+    color: #6f3f22;
+}
+
+
+.edit-btn:hover {
+    background: #e3ccb8;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.delete-btn {
+    background: #f8e2df;
+    color: #a33a3a;
+}
+
+
+.delete-btn:hover {
+    background: #efcdca;
+}
+
+
+/* =========================================================
+   NO PRODUCTS
+========================================================= */
+
+.no-products {
+    text-align: center;
+    padding: 70px 20px !important;
+}
+
+
+.no-products span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+.no-products h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #3f2417;
+    margin-bottom: 7px;
+}
+
+
+.no-products p {
+    color: #806858;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .admin-main {
+        margin-left: 230px;
+        padding: 35px 30px;
+    }
+
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+
+    .add-product-btn {
+        padding: 13px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .admin-main {
+        margin-left: 0;
+        padding: 25px 18px;
+    }
+
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+
+    .page-description {
+        font-size: 13px;
+    }
+
+
+    .add-product-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .section-top {
+        padding: 20px;
+    }
+
+
+    .product-table th,
+    .product-table td {
+        padding: 14px 15px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .admin-main {
+        padding: 20px 12px;
+    }
+
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+
+    .section-top h2 {
+        font-size: 20px;
+    }
+
+}

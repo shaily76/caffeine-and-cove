@@ -1,0 +1,1482 @@
+/* =========================================================
+   SIPAURA HOME PAGE
+========================================================= */
+
+:root {
+
+    --home-cream: #f8f4ee;
+
+    --home-light: #fcfaf7;
+
+    --home-brown: #795238;
+
+    --home-dark: #31241d;
+
+    --home-text: #1b1714;
+
+    --home-muted: #746b64;
+
+    --home-soft-brown: #b39b8d;
+
+    --home-border: #e8dfd6;
+
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+body {
+
+    margin: 0;
+
+    background: var(--home-light);
+
+    color: var(--home-text);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sipaura-hero {
+
+    padding: 85px 0 70px;
+
+    background: var(--home-light);
+}
+
+
+.hero-container {
+
+    width: min(1380px, calc(100% - 100px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.hero-content {
+
+    padding-left: 35px;
+}
+
+
+.hero-small-title {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--home-brown);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.hero-content h1 {
+
+    margin: 0;
+
+    max-width: 620px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 5vw, 76px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-content h1 span {
+
+    color: var(--home-brown);
+}
+
+
+.hero-content p {
+
+    max-width: 520px;
+
+    margin: 28px 0 0;
+
+    color: var(--home-muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 34px;
+}
+
+
+.hero-primary-btn,
+.hero-secondary-btn {
+
+    min-width: 135px;
+
+    height: 48px;
+
+    padding: 0 24px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.hero-primary-btn {
+
+    background: var(--home-brown);
+
+    color: #fff;
+}
+
+
+.hero-primary-btn:hover {
+
+    background: var(--home-dark);
+
+    transform: translateY(-2px);
+}
+
+
+.hero-secondary-btn {
+
+    border: 1px solid var(--home-border);
+
+    color: var(--home-dark);
+
+    background: transparent;
+}
+
+
+.hero-secondary-btn:hover {
+
+    background: #f1ebe4;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image-wrapper {
+
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 34px;
+}
+
+
+.hero-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+.hero-image-wrapper:hover .hero-image {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   COFFEE SECTION
+========================================================= */
+
+.coffee-section {
+
+    padding: 90px 0;
+
+    background: var(--home-light);
+}
+
+
+.coffee-container {
+
+    width: min(1250px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading > span {
+
+    color: var(--home-brown);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.section-heading h2 {
+
+    margin: 8px 0 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 44px;
+
+    font-weight: 600;
+}
+
+
+.heading-line {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.heading-line span {
+
+    width: 55px;
+
+    height: 1px;
+
+    background: var(--home-brown);
+}
+
+
+.heading-line small {
+
+    color: var(--home-brown);
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   COFFEE GRID
+========================================================= */
+
+.coffee-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    padding: 42px;
+
+    background: var(--home-soft-brown);
+
+    border-radius: 32px;
+}
+
+
+.coffee-card {
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #f8f3ec;
+
+    box-shadow: 0 8px 24px rgba(45, 30, 20, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.coffee-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 16px 35px rgba(45, 30, 20, 0.11);
+}
+
+
+.coffee-image {
+
+    height: 250px;
+
+    overflow: hidden;
+}
+
+
+.coffee-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.45s ease;
+}
+
+
+.coffee-card:hover .coffee-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   COFFEE INFO
+========================================================= */
+
+.coffee-info {
+
+    padding: 24px;
+}
+
+
+.coffee-info h3 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+}
+
+
+.coffee-info p {
+
+    margin: 10px 0;
+
+    color: var(--home-muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.coffee-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+
+.coffee-bottom strong {
+
+    font-size: 17px;
+
+    color: var(--home-dark);
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.add-product-btn {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--home-brown);
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.add-product-btn:hover {
+
+    background: var(--home-dark);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   VIEW MENU BUTTON
+========================================================= */
+
+.section-button {
+
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+
+.view-menu-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 170px;
+
+    height: 47px;
+
+    padding: 0 25px;
+
+    border-radius: 25px;
+
+    background: var(--home-brown);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.view-menu-btn:hover {
+
+    background: var(--home-dark);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   WHY SECTION
+========================================================= */
+
+.why-section {
+
+    padding: 100px 0;
+
+    background: #f0e9e1;
+}
+
+
+.why-container {
+
+    width: min(1180px, calc(100% - 80px));
+
+    margin: auto;
+}
+
+
+.why-heading {
+
+    max-width: 620px;
+
+    margin-bottom: 50px;
+}
+
+
+.why-heading span {
+
+    color: var(--home-brown);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.why-heading h2 {
+
+    margin-top: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+}
+
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.why-card {
+
+    padding: 35px;
+
+    background: rgba(255,255,255,0.55);
+
+    border: 1px solid rgba(121,82,56,0.08);
+
+    border-radius: 20px;
+}
+
+
+.why-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e2d4c8;
+
+    color: var(--home-brown);
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+.why-card h3 {
+
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+}
+
+
+.why-card p {
+
+    margin: 0;
+
+    color: var(--home-muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   STORY SECTION
+========================================================= */
+
+.story-section {
+
+    padding: 100px 0;
+
+    background: var(--home-light);
+}
+
+
+.story-container {
+
+    width: min(1200px, calc(100% - 80px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+
+.story-image {
+
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+}
+
+
+.story-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.story-content > span {
+
+    color: var(--home-brown);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.story-content h2 {
+
+    margin: 14px 0 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+}
+
+
+.story-content p {
+
+    margin-bottom: 16px;
+
+    color: var(--home-muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.story-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 15px;
+
+    padding: 13px 22px;
+
+    border-radius: 22px;
+
+    background: var(--home-brown);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   OFFER
+========================================================= */
+
+.offer-section {
+
+    padding: 80px 0;
+}
+
+
+.offer-container {
+
+    width: min(1200px, calc(100% - 80px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #75503a;
+}
+
+
+.offer-content {
+
+    padding: 60px;
+
+    color: #fff;
+}
+
+
+.offer-content > span {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #f0d0b5;
+}
+
+
+.offer-content h2 {
+
+    margin: 16px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+}
+
+
+.offer-content p {
+
+    max-width: 430px;
+
+    color: #eadfd7;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.offer-btn {
+
+    display: inline-flex;
+
+    margin-top: 20px;
+
+    padding: 13px 25px;
+
+    border-radius: 24px;
+
+    background: #fff;
+
+    color: var(--home-dark);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.offer-image {
+
+    min-height: 360px;
+}
+
+
+.offer-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* =========================================================
+   CUSTOMER REVIEWS
+========================================================= */
+
+.reviews-section {
+    padding: 110px 0;
+
+    background: #fcfaf7;
+}
+
+.reviews-container {
+    width: min(1200px, calc(100% - 80px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.reviews-heading {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 55px;
+}
+
+.reviews-heading span {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #795238;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.reviews-heading h2 {
+    margin: 0 0 15px;
+
+    color: #31241d;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+}
+
+.reviews-heading p {
+    margin: 0;
+
+    color: #746b64;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REVIEW GRID
+========================================================= */
+
+.reviews-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.review-card {
+    padding: 38px 35px;
+
+    min-height: 310px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #f5eee7;
+
+    border: 1px solid #e8ddd3;
+
+    border-radius: 24px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(66, 45, 30, 0.08);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote-mark {
+    color: #795238;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 52px;
+
+    line-height: 0.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.review-card p {
+    margin: 0;
+
+    color: #5f554e;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.review-stars {
+    margin-top: auto;
+
+    margin-bottom: 15px;
+
+    color: #795238;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.review-name {
+    color: #31241d;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.review-role {
+    margin-top: 3px;
+
+    color: #8b8077;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .reviews-section {
+        padding: 75px 0;
+    }
+
+    .reviews-container {
+        width: calc(100% - 35px);
+    }
+
+    .reviews-heading h2 {
+        font-size: 38px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card:last-child {
+        grid-column: auto;
+    }
+
+    .review-card {
+        min-height: 280px;
+
+        padding: 32px 28px;
+    }
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .hero-content {
+
+        padding-left: 0;
+    }
+
+
+    .hero-image-wrapper {
+
+        height: 440px;
+    }
+
+
+    .coffee-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .why-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .story-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .story-image {
+
+        height: 420px;
+    }
+
+
+    .offer-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .offer-image {
+
+        height: 350px;
+    }
+
+
+    .reviews-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sipaura-hero {
+
+        padding: 55px 0;
+    }
+
+
+    .hero-container {
+
+        width: calc(100% - 35px);
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 47px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-content p {
+
+        font-size: 14px;
+    }
+
+
+    .hero-image-wrapper {
+
+        height: 350px;
+
+        border-radius: 24px;
+    }
+
+
+    .coffee-container,
+    .why-container,
+    .story-container,
+    .offer-container,
+    .reviews-container {
+
+        width: calc(100% - 35px);
+    }
+
+
+    .coffee-grid {
+
+        grid-template-columns: 1fr;
+
+        padding: 22px;
+    }
+
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .story-content h2 {
+
+        font-size: 38px;
+    }
+
+
+    .offer-content {
+
+        padding: 40px 25px;
+    }
+
+
+    .offer-content h2 {
+
+        font-size: 37px;
+    }
+
+
+    .reviews-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================================
+   CAFE FEATURES
+========================================================= */
+
+.cove-features {
+
+    width: 100%;
+
+    background: #fffdf9;
+
+    border-top: 1px solid #eadfd4;
+
+    border-bottom: 1px solid #eadfd4;
+
+}
+
+
+.cove-features-container {
+
+    width: min(1280px, calc(100% - 50px));
+
+    min-height: 145px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.cove-feature {
+
+    min-height: 105px;
+
+    padding: 15px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.cove-feature-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1e7dc;
+
+    color: #80502f;
+
+    font-size: 22px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.cove-feature:hover .cove-feature-icon {
+
+    background: #80502f;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.cove-feature-text h3 {
+
+    margin: 0 0 5px;
+
+    color: #302017;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.cove-feature-text p {
+
+    margin: 0;
+
+    color: #8a796b;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .cove-features-container {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        padding: 20px 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .cove-features-container {
+
+        width: calc(100% - 30px);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        padding: 15px 0;
+
+    }
+
+
+    .cove-feature {
+
+        min-height: 125px;
+
+        padding: 15px 8px;
+
+    }
+
+
+    .cove-feature-icon {
+
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 20px;
+
+    }
+
+
+    .cove-feature-text h3 {
+
+        font-size: 15px;
+
+    }
+
+
+    .cove-feature-text p {
+
+        font-size: 9px;
+
+    }
+
+}

@@ -1,0 +1,1786 @@
+/* =========================================================
+   CAFFEINE & COVE
+   FIXED + SHRINKING HEADER
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    --cove-dark: #3f2418;
+    --cove-brown: #6f4329;
+    --cove-medium: #8b5735;
+
+    --cove-gold: #b97843;
+    --cove-gold-light: #d6a16c;
+
+    --cove-cream: #fffaf4;
+    --cove-light: #f7eee5;
+    --cove-white: #fffdf9;
+
+    --cove-border: #eadbcd;
+
+    --cove-text: #332018;
+    --cove-muted: #806b5d;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.cove-fixed-header *,
+.cove-fixed-header *::before,
+.cove-fixed-header *::after {
+    box-sizing: border-box;
+}
+
+.cove-fixed-header a {
+    text-decoration: none;
+}
+
+.cove-fixed-header button {
+    font-family: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   FIXED HEADER
+   ========================================================= */
+
+.cove-fixed-header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 99999;
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.cove-topbar {
+
+    width: 100%;
+
+    background: var(--cove-dark);
+
+    color: var(--cove-white);
+
+    font-family: "DM Sans", sans-serif;
+
+    transition:
+        min-height 0.35s ease,
+        padding 0.35s ease,
+        opacity 0.35s ease;
+
+}
+
+
+.cove-topbar-inner {
+
+    width: 100%;
+
+    max-width: 1600px;
+
+    min-height: 48px;
+
+    margin: 0 auto;
+
+    padding: 0 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    transition:
+        min-height 0.35s ease,
+        padding 0.35s ease;
+
+}
+
+
+.cove-topbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.cove-topbar-left span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition:
+        font-size 0.35s ease;
+
+}
+
+
+.cove-topbar-left i {
+
+    color: var(--cove-gold-light);
+
+    font-size: 14px;
+
+    transition:
+        font-size 0.35s ease;
+
+}
+
+
+.cove-topbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    transition:
+        font-size 0.35s ease;
+
+}
+
+
+.cove-topbar-right > span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+
+.cove-topbar-right i {
+
+    color: var(--cove-gold-light);
+
+    font-size: 11px;
+
+}
+
+
+.topbar-divider {
+
+    color: rgba(255,255,255,0.35);
+
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.cove-social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.cove-social-icons a {
+
+    width: 27px;
+    height: 27px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 10px;
+
+    transition:
+        width 0.35s ease,
+        height 0.35s ease,
+        font-size 0.35s ease,
+        background 0.25s ease;
+
+}
+
+
+.cove-social-icons a:hover {
+
+    background: var(--cove-gold);
+
+    border-color: var(--cove-gold);
+
+    color: var(--cove-dark);
+
+}
+
+
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
+
+.cove-new-header {
+
+    width: 100%;
+
+    background: rgba(255,250,244,0.98);
+
+    border-bottom: 1px solid var(--cove-border);
+
+    font-family: "DM Sans", sans-serif;
+
+    box-shadow:
+        0 5px 18px rgba(63,36,24,0.08);
+
+    transition:
+        min-height 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.cove-header-inner {
+
+    width: 100%;
+
+    max-width: 1600px;
+
+    min-height: 145px;
+
+    margin: 0 auto;
+
+    padding: 15px 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    transition:
+        min-height 0.35s ease,
+        padding 0.35s ease,
+        gap 0.35s ease;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.cove-new-logo {
+
+    width: 245px;
+
+    flex: 0 0 245px;
+
+    display: flex;
+
+    align-items: center;
+
+    transition:
+        width 0.35s ease,
+        flex-basis 0.35s ease;
+
+}
+
+
+.cove-new-logo img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 245px;
+
+    max-height: 95px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    transition:
+        max-width 0.35s ease,
+        max-height 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.cove-new-nav {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1px;
+
+}
+
+
+/* =========================================================
+   NORMAL NAV ITEM
+   ========================================================= */
+
+.cove-new-nav-link {
+
+    position: relative;
+
+    min-width: 68px;
+
+    min-height: 70px;
+
+    padding: 8px 6px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: var(--cove-text);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        min-height 0.35s ease,
+        min-width 0.35s ease,
+        padding 0.35s ease,
+        gap 0.35s ease,
+        font-size 0.35s ease,
+        color 0.25s ease;
+
+}
+
+
+.cove-new-nav-link i {
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--cove-brown);
+
+    font-size: 16px;
+
+    transition:
+        width 0.35s ease,
+        height 0.35s ease,
+        font-size 0.35s ease,
+        transform 0.25s ease;
+
+}
+
+
+.cove-new-nav-link:hover {
+
+    color: var(--cove-brown);
+
+}
+
+
+.cove-new-nav-link:hover i {
+
+    color: var(--cove-medium);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ACTIVE */
+
+.cove-new-nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--cove-gold);
+
+    transform: translateX(-50%);
+
+    transition: width 0.25s ease;
+
+}
+
+
+.cove-new-nav-link:hover::after {
+
+    width: 30px;
+
+}
+
+
+.cove-new-nav-link.active {
+
+    color: var(--cove-brown);
+
+}
+
+
+.cove-new-nav-link.active::after {
+
+    width: 36px;
+
+}
+
+
+/* =========================================================
+   ACCOUNT
+   ========================================================= */
+
+.cove-account-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.cove-account-button {
+
+    position: relative;
+
+    min-width: 82px;
+
+    min-height: 70px;
+
+    padding: 8px 8px 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--cove-brown);
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-family: "DM Sans", sans-serif;
+
+    transition:
+        min-height 0.35s ease,
+        min-width 0.35s ease,
+        gap 0.35s ease;
+
+}
+
+
+.account-main-icon {
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--cove-gold);
+
+    font-size: 16px;
+
+    transition:
+        font-size 0.35s ease,
+        width 0.35s ease,
+        height 0.35s ease;
+
+}
+
+
+.account-user-name {
+
+    max-width: 100px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition:
+        font-size 0.35s ease,
+        max-width 0.35s ease;
+
+}
+
+
+.account-arrow {
+
+    position: absolute;
+
+    top: 17px;
+
+    right: 3px;
+
+    font-size: 8px;
+
+    transition:
+        top 0.35s ease,
+        transform 0.25s ease;
+
+}
+
+
+.cove-account-button.open .account-arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   ACCOUNT DROPDOWN
+   ========================================================= */
+
+.cove-account-dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 9px);
+
+    right: 0;
+
+    width: 215px;
+
+    padding: 8px;
+
+    background: var(--cove-white);
+
+    border: 1px solid var(--cove-border);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 18px 40px rgba(63,36,24,0.15);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 100000;
+
+}
+
+
+.cove-account-dropdown.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+.cove-account-dropdown a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border-radius: 7px;
+
+    color: var(--cove-text);
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+}
+
+
+.cove-account-dropdown a i {
+
+    width: 18px;
+
+    text-align: center;
+
+    color: var(--cove-brown);
+
+    font-size: 12px;
+
+}
+
+
+.cove-account-dropdown a:hover {
+
+    background: var(--cove-light);
+
+    color: var(--cove-brown);
+
+}
+
+
+.account-dropdown-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 6px 0;
+
+    background: var(--cove-border);
+
+}
+
+
+.cove-account-dropdown .account-logout {
+
+    color: #8b432e;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.cove-new-actions {
+
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    transition:
+        gap 0.35s ease;
+
+}
+
+
+/* =========================================================
+   CART
+   ========================================================= */
+
+.cove-new-cart {
+
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    flex: 0 0 56px;
+
+    border: 1px solid var(--cove-border);
+
+    border-radius: 50%;
+
+    background: var(--cove-white);
+
+    color: var(--cove-dark);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        width 0.35s ease,
+        height 0.35s ease,
+        flex-basis 0.35s ease,
+        font-size 0.35s ease,
+        background 0.25s ease;
+
+}
+
+
+.cove-new-cart i {
+
+    font-size: 18px;
+
+    transition:
+        font-size 0.35s ease;
+
+}
+
+
+.cove-new-cart:hover {
+
+    background: var(--cove-dark);
+
+    color: white;
+
+}
+
+
+.cove-new-cart-count {
+
+    position: absolute;
+
+    top: -4px;
+    right: -3px;
+
+    min-width: 21px;
+    height: 21px;
+
+    padding: 0 5px;
+
+    border-radius: 50%;
+
+    background: var(--cove-gold);
+
+    color: white;
+
+    border: 2px solid var(--cove-cream);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+   ========================================================= */
+
+.cove-new-book {
+
+    min-width: 180px;
+
+    height: 56px;
+
+    padding: 0 21px;
+
+    border-radius: 8px;
+
+    background: var(--cove-brown);
+
+    color: white;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        min-width 0.35s ease,
+        height 0.35s ease,
+        padding 0.35s ease,
+        font-size 0.35s ease,
+        gap 0.35s ease;
+
+}
+
+
+.book-arrow {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    transition:
+        font-size 0.35s ease;
+
+}
+
+
+/* =========================================================
+   SHRUNK STATE
+   Triggered after 40px scroll
+   ========================================================= */
+
+.cove-fixed-header.scrolled {
+
+    box-shadow:
+        0 8px 28px rgba(63,36,24,0.15);
+
+}
+
+
+/* SMALL TOP BAR */
+
+.cove-fixed-header.scrolled .cove-topbar-inner {
+
+    min-height: 31px;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-topbar-left span {
+
+    font-size: 10px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-topbar-left i {
+
+    font-size: 11px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-topbar-right {
+
+    font-size: 9px;
+
+    gap: 10px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-social-icons a {
+
+    width: 21px;
+
+    height: 21px;
+
+    font-size: 8px;
+
+}
+
+
+/* SMALL MAIN HEADER */
+
+.cove-fixed-header.scrolled .cove-header-inner {
+
+    min-height: 82px;
+
+    padding-top: 8px;
+
+    padding-bottom: 8px;
+
+    gap: 15px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-new-logo {
+
+    width: 175px;
+
+    flex-basis: 175px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-new-logo img {
+
+    max-width: 175px;
+
+    max-height: 62px;
+
+}
+
+
+/* SMALL NAV */
+
+.cove-fixed-header.scrolled .cove-new-nav-link {
+
+    min-width: 58px;
+
+    min-height: 52px;
+
+    padding-top: 5px;
+
+    padding-bottom: 8px;
+
+    gap: 4px;
+
+    font-size: 9px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-new-nav-link i {
+
+    width: 20px;
+
+    height: 20px;
+
+    font-size: 13px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-new-nav-link::after {
+
+    bottom: 0;
+
+}
+
+
+/* SMALL ACCOUNT */
+
+.cove-fixed-header.scrolled .cove-account-button {
+
+    min-width: 68px;
+
+    min-height: 52px;
+
+    padding-top: 5px;
+
+    padding-bottom: 8px;
+
+    gap: 4px;
+
+}
+
+
+.cove-fixed-header.scrolled .account-main-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    font-size: 13px;
+
+}
+
+
+.cove-fixed-header.scrolled .account-user-name {
+
+    max-width: 80px;
+
+    font-size: 9px;
+
+}
+
+
+.cove-fixed-header.scrolled .account-arrow {
+
+    top: 10px;
+
+}
+
+
+/* SMALL CART */
+
+.cove-fixed-header.scrolled .cove-new-cart {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex-basis: 44px;
+
+}
+
+
+.cove-fixed-header.scrolled .cove-new-cart i {
+
+    font-size: 15px;
+
+}
+
+
+/* SMALL BOOK BUTTON */
+
+.cove-fixed-header.scrolled .cove-new-book {
+
+    min-width: 145px;
+
+    height: 44px;
+
+    padding: 0 15px;
+
+    gap: 9px;
+
+    font-size: 13px;
+
+}
+
+
+.cove-fixed-header.scrolled .book-arrow {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+   ========================================================= */
+
+.cove-new-mobile {
+
+    display: none;
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 1px solid var(--cove-border);
+
+    border-radius: 50%;
+
+    background: var(--cove-white);
+
+    cursor: pointer;
+
+    padding: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.cove-new-mobile span {
+
+    display: block;
+
+    width: 18px;
+
+    height: 1.5px;
+
+    background: var(--cove-dark);
+
+    transition: all 0.25s ease;
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1400px) {
+
+    .cove-header-inner {
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+
+        gap: 15px;
+
+    }
+
+
+    .cove-new-logo {
+
+        width: 215px;
+
+        flex-basis: 215px;
+
+    }
+
+
+    .cove-new-logo img {
+
+        max-width: 215px;
+
+    }
+
+
+    .cove-new-nav-link {
+
+        min-width: 61px;
+
+        font-size: 9px;
+
+        padding-left: 4px;
+
+        padding-right: 4px;
+
+    }
+
+
+    .cove-new-nav-link i {
+
+        font-size: 14px;
+
+    }
+
+
+    .cove-account-button {
+
+        min-width: 70px;
+
+    }
+
+
+    .account-user-name {
+
+        max-width: 75px;
+
+        font-size: 9px;
+
+    }
+
+
+    .cove-new-book {
+
+        min-width: 155px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-logo {
+
+        width: 160px;
+
+        flex-basis: 160px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-logo img {
+
+        max-width: 160px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .cove-topbar-inner {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .cove-topbar-right {
+
+        gap: 10px;
+
+        font-size: 10px;
+
+    }
+
+
+    .cove-header-inner {
+
+        min-height: 120px;
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+
+    .cove-new-logo {
+
+        width: 180px;
+
+        flex-basis: 180px;
+
+    }
+
+
+    .cove-new-logo img {
+
+        max-width: 180px;
+
+    }
+
+
+    .cove-new-nav-link {
+
+        min-width: 52px;
+
+        min-height: 60px;
+
+        font-size: 8px;
+
+    }
+
+
+    .cove-new-nav-link i {
+
+        font-size: 12px;
+
+    }
+
+
+    .cove-account-button {
+
+        min-width: 58px;
+
+        min-height: 60px;
+
+    }
+
+
+    .account-user-name {
+
+        max-width: 60px;
+
+        font-size: 8px;
+
+    }
+
+
+    .cove-new-book {
+
+        min-width: 125px;
+
+        height: 48px;
+
+        font-size: 12px;
+
+    }
+
+
+    .cove-new-cart {
+
+        width: 48px;
+
+        height: 48px;
+
+        flex-basis: 48px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-topbar-inner {
+
+        min-height: 28px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-header-inner {
+
+        min-height: 72px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .cove-topbar-right {
+
+        display: none;
+
+    }
+
+
+    .cove-topbar-inner {
+
+        min-height: 38px;
+
+        justify-content: center;
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+    }
+
+
+    .cove-topbar-left span {
+
+        font-size: 10px;
+
+    }
+
+
+    .cove-header-inner {
+
+        position: relative;
+
+        min-height: 74px;
+
+        padding: 10px 15px;
+
+        gap: 10px;
+
+    }
+
+
+    .cove-new-logo {
+
+        width: 165px;
+
+        flex-basis: 165px;
+
+    }
+
+
+    .cove-new-logo img {
+
+        max-width: 165px;
+
+        max-height: 58px;
+
+    }
+
+
+    /* MOBILE NAV */
+
+    .cove-new-nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 10px 15px 15px;
+
+        background: var(--cove-cream);
+
+        border-top: 1px solid var(--cove-border);
+
+        border-bottom: 1px solid var(--cove-border);
+
+        box-shadow:
+            0 12px 28px rgba(63,36,24,0.12);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        z-index: 100001;
+
+    }
+
+
+    .cove-new-nav.mobile-open {
+
+        display: flex;
+
+    }
+
+
+    .cove-new-nav-link {
+
+        width: 100%;
+
+        min-height: 50px;
+
+        padding: 10px 15px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        gap: 13px;
+
+        border-radius: 7px;
+
+        font-size: 12px;
+
+    }
+
+
+    .cove-new-nav-link i {
+
+        width: 24px;
+
+        height: 24px;
+
+        font-size: 14px;
+
+    }
+
+
+    .cove-new-nav-link::after {
+
+        display: none;
+
+    }
+
+
+    /* ACCOUNT */
+
+    .cove-account-wrapper {
+
+        width: 100%;
+
+        margin-top: 5px;
+
+        padding-top: 5px;
+
+        border-top: 1px solid var(--cove-border);
+
+    }
+
+
+    .cove-account-button {
+
+        width: 100%;
+
+        min-height: 50px;
+
+        padding: 10px 15px;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        border-radius: 7px;
+
+        background: var(--cove-light);
+
+    }
+
+
+    .account-main-icon {
+
+        width: 24px;
+
+        height: 24px;
+
+        font-size: 14px;
+
+    }
+
+
+    .account-user-name {
+
+        max-width: none;
+
+        font-size: 12px;
+
+    }
+
+
+    .account-arrow {
+
+        position: static;
+
+        margin-left: auto;
+
+    }
+
+
+    /* DROPDOWN */
+
+    .cove-account-dropdown {
+
+        position: static;
+
+        width: 100%;
+
+        margin-top: 4px;
+
+        display: none;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+    }
+
+
+    .cove-account-dropdown.show {
+
+        display: block;
+
+    }
+
+
+    /* ACTIONS */
+
+    .cove-new-actions {
+
+        margin-left: auto;
+
+        gap: 7px;
+
+    }
+
+
+    .cove-new-book {
+
+        display: none;
+
+    }
+
+
+    .cove-new-cart {
+
+        width: 43px;
+
+        height: 43px;
+
+        flex-basis: 43px;
+
+    }
+
+
+    .cove-new-mobile {
+
+        display: flex;
+
+    }
+
+
+    /* SCROLLED MOBILE */
+
+    .cove-fixed-header.scrolled .cove-topbar {
+
+        display: block;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-topbar-inner {
+
+        min-height: 30px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-topbar-left span {
+
+        font-size: 9px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-header-inner {
+
+        min-height: 62px;
+
+        padding-top: 6px;
+
+        padding-bottom: 6px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-logo {
+
+        width: 140px;
+
+        flex-basis: 140px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-logo img {
+
+        max-width: 140px;
+
+        max-height: 48px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-cart {
+
+        width: 38px;
+
+        height: 38px;
+
+        flex-basis: 38px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-mobile {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .cove-header-inner {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+    }
+
+
+    .cove-new-logo {
+
+        width: 150px;
+
+        flex-basis: 150px;
+
+    }
+
+
+    .cove-new-logo img {
+
+        max-width: 150px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-logo {
+
+        width: 125px;
+
+        flex-basis: 125px;
+
+    }
+
+
+    .cove-fixed-header.scrolled .cove-new-logo img {
+
+        max-width: 125px;
+
+    }
+
+}

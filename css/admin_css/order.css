@@ -1,0 +1,425 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN - ORDERS PAGE
+   Sidebar CSS is handled by sidebar.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f1e9;
+    color: #4a2c1d;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.admin-main {
+    margin-left: 260px;
+    min-height: 100vh;
+    padding: 55px 50px 70px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 38px;
+}
+
+
+.page-eyebrow {
+    display: block;
+    color: #a15f36;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 48px;
+    color: #4a2c1d;
+}
+
+
+.page-header p {
+    margin: 10px 0 0;
+    color: #80695b;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ORDER COUNT
+========================================================= */
+
+.order-count {
+    min-width: 150px;
+    padding: 18px 22px;
+    background: #fffaf5;
+    border: 1px solid #ead8c8;
+    border-radius: 14px;
+    text-align: center;
+}
+
+
+.order-count strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #754324;
+}
+
+
+.order-count span {
+    display: block;
+    margin-top: 5px;
+    color: #80695b;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ORDERS CARD
+========================================================= */
+
+.orders-card {
+    background: #fffdf9;
+    border: 1px solid #ead8c8;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(67, 37, 20, 0.06);
+}
+
+
+.orders-card-header {
+    padding: 28px 30px;
+    border-bottom: 1px solid #eee0d3;
+}
+
+
+.orders-card-header h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #4a2c1d;
+}
+
+
+.orders-card-header p {
+    margin: 7px 0 0;
+    color: #8b7567;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.orders-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   ORDERS TABLE
+========================================================= */
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+
+.orders-table th {
+    padding: 16px 18px;
+    text-align: left;
+    background: #f8eee5;
+    color: #805236;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+.orders-table td {
+    padding: 18px;
+    border-bottom: 1px solid #eee2d8;
+    vertical-align: middle;
+}
+
+
+.orders-table tbody tr {
+    transition: 0.2s ease;
+}
+
+
+.orders-table tbody tr:hover {
+    background: #fff8f1;
+}
+
+
+.orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ORDER ID
+========================================================= */
+
+.order-id {
+    font-weight: 700;
+    color: #87502f;
+}
+
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.customer-info strong {
+    font-size: 14px;
+    color: #4a2c1d;
+}
+
+
+.customer-info small {
+    color: #927c6d;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ORDER TYPE
+========================================================= */
+
+.order-type {
+    display: inline-block;
+    padding: 7px 11px;
+    background: #f3e8dc;
+    border-radius: 20px;
+    color: #704226;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.order-total {
+    color: #60351f;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.order-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* PENDING */
+
+.order-status.pending {
+    background: #fff1c9;
+    color: #856404;
+}
+
+
+/* PROCESSING */
+
+.order-status.processing {
+    background: #eadff4;
+    color: #65417f;
+}
+
+
+/* COMPLETED */
+
+.order-status.completed {
+    background: #dff2e4;
+    color: #28703a;
+}
+
+
+/* CANCELLED */
+
+.order-status.cancelled {
+    background: #f8d9dc;
+    color: #8a2d35;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.order-date {
+    color: #806d60;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.view-order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: #f0e2d5;
+    color: #63391f;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+
+.view-order-btn:hover {
+    background: #754324;
+    color: #ffffff;
+}
+
+
+.view-order-btn span {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   EMPTY ORDERS
+========================================================= */
+
+.empty-orders {
+    text-align: center;
+    padding: 75px 25px;
+}
+
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #f3e5d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+.empty-orders h3 {
+    margin: 0 0 8px;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #4a2c1d;
+}
+
+
+.empty-orders p {
+    margin: 0;
+    color: #8a7567;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-main {
+        margin-left: 220px;
+        padding: 40px 25px;
+    }
+
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .admin-main {
+        margin-left: 0;
+        padding: 30px 15px;
+    }
+
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .order-count {
+        width: 100%;
+    }
+
+}

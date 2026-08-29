@@ -1,0 +1,1116 @@
+/* =========================================================
+   CAFFEINE & COVE
+   CONTACT PAGE
+========================================================= */
+
+:root {
+
+    --cream: #f8f1e8;
+    --light-cream: #fffaf4;
+    --white: #fffdf9;
+
+    --brown: #6f4325;
+    --dark-brown: #4d2b17;
+
+    --text: #302017;
+    --muted: #76675d;
+
+    --border: #dfd1c2;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.contact-page,
+.contact-page * {
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.contact-hero {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+.contact-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(30, 18, 10, 0.55);
+
+}
+
+
+.contact-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+
+.hero-cup {
+
+    margin-bottom: 5px;
+
+    color: #c99a67;
+
+    font-size: 35px;
+
+}
+
+
+.contact-hero h1 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+}
+
+
+.hero-divider {
+
+    margin: 15px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+
+.hero-divider span {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #c99a67;
+
+}
+
+
+.hero-divider b {
+
+    color: #d2aa7c;
+
+    font-size: 13px;
+
+}
+
+
+.contact-hero p {
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+
+    width: 100%;
+
+    padding: 55px 30px;
+
+    background: var(--cream);
+
+}
+
+
+.contact-container {
+
+    width: min(1150px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.25fr;
+
+    gap: 50px;
+
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+
+    margin-bottom: 28px;
+
+    text-align: center;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+}
+
+
+.heading-divider {
+
+    margin: 12px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.heading-divider span {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #b99a7d;
+
+}
+
+
+.heading-divider b {
+
+    color: var(--brown);
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+========================================================= */
+
+.contact-information {
+
+    padding-right: 35px;
+
+    border-right: 1px solid #ddcfc1;
+
+}
+
+
+/* =========================================================
+   INFORMATION ROW
+========================================================= */
+
+.contact-info-row {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 14px 5px;
+
+    border-bottom: 1px dashed #dccfc2;
+
+}
+
+
+.contact-info-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.contact-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--dark-brown);
+
+    color: #fff;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   INFORMATION TEXT
+========================================================= */
+
+.contact-info-text h3 {
+
+    margin: 2px 0 5px;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.contact-info-text p {
+
+    margin: 0;
+
+    color: #42372f;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social-links {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 6px;
+
+}
+
+
+.social-links a {
+
+    color: var(--text);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.social-links a:hover {
+
+    color: var(--brown);
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form-area {
+
+    padding-left: 0;
+
+}
+
+
+.contact-form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+.full-width {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-group input {
+
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 18px 0 50px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(255,255,255,0.35);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #796c62;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: var(--brown);
+
+    background: var(--white);
+
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    color: var(--brown);
+
+    font-size: 17px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.textarea-group {
+
+    position: relative;
+
+}
+
+
+.form-group textarea {
+
+    width: 100%;
+
+    height: 165px;
+
+    padding: 18px 18px 18px 50px;
+
+    resize: vertical;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(255,255,255,0.35);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.contact-submit {
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: var(--dark-brown);
+
+    color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+
+.contact-submit:hover {
+
+    background: #351c0d;
+
+    transform: translateY(-1px);
+
+}
+
+
+.contact-submit span {
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   FIND US SECTION
+========================================================= */
+
+.find-section {
+
+    width: 100%;
+
+    padding: 0 20px 15px;
+
+    background: var(--cream);
+
+}
+
+
+.find-container {
+
+    width: min(1200px, 100%);
+
+    min-height: 275px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #f5eadf;
+
+}
+
+
+/* =========================================================
+   FIND CONTENT
+========================================================= */
+
+.find-content {
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    text-align: left;
+
+}
+
+
+.find-decoration {
+
+    color: var(--brown);
+
+    font-size: 27px;
+
+}
+
+
+.find-content h2 {
+
+    margin: 5px 0 10px;
+
+    color: var(--text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+}
+
+
+.find-content p {
+
+    max-width: 190px;
+
+    margin: 0;
+
+    color: #57483d;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.find-coffee {
+
+    margin-top: 18px;
+
+    color: var(--brown);
+
+    font-size: 45px;
+
+}
+
+
+.find-beans {
+
+    margin-top: -10px;
+
+    color: #6d4326;
+
+    letter-spacing: 10px;
+
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-container {
+
+    position: relative;
+
+    min-height: 275px;
+
+}
+
+
+.map-container iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 275px;
+
+    display: block;
+
+    border: 0;
+
+}
+
+
+/* =========================================================
+   MAP LABEL
+========================================================= */
+
+.map-label {
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 45%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    min-width: 210px;
+
+    padding: 13px 16px;
+
+    background: rgba(255,255,255,0.94);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.13);
+
+}
+
+
+.map-pin {
+
+    font-size: 21px;
+
+}
+
+
+.map-label strong {
+
+    color: #33271e;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+}
+
+
+.map-label p {
+
+    margin: 4px 0 0;
+
+    color: #6e6259;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   BOTTOM HEAR SECTION
+========================================================= */
+
+.hear-section {
+
+    width: 100%;
+
+    padding: 10px 20px 15px;
+
+    background: var(--cream);
+
+}
+
+
+.hear-container {
+
+    width: min(1200px, 100%);
+
+    min-height: 175px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #f7eee4;
+
+}
+
+
+/* =========================================================
+   HEAR CONTENT
+========================================================= */
+
+.hear-content {
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.hear-icon {
+
+    color: var(--brown);
+
+    font-size: 25px;
+
+}
+
+
+.hear-content h2 {
+
+    margin: 5px 0 8px;
+
+    color: var(--text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+}
+
+
+.hear-content p {
+
+    max-width: 380px;
+
+    margin: 0;
+
+    color: #5c4d42;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   HEAR IMAGE
+========================================================= */
+
+.hear-image {
+
+    min-height: 175px;
+
+    overflow: hidden;
+
+}
+
+
+.hear-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .contact-information {
+
+        padding-right: 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid #ddcfc1;
+
+        padding-bottom: 30px;
+
+    }
+
+
+    .find-container {
+
+        grid-template-columns: 230px 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .contact-hero {
+
+        height: 240px;
+
+    }
+
+
+    .contact-hero h1 {
+
+        font-size: 39px;
+
+    }
+
+
+    .contact-hero p {
+
+        padding: 0 20px;
+
+        font-size: 13px;
+
+    }
+
+
+    .contact-section {
+
+        padding:
+            40px 18px 50px;
+
+    }
+
+
+    .contact-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .full-width {
+
+        grid-column: auto;
+
+    }
+
+
+    .contact-submit {
+
+        grid-column: auto;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 26px;
+
+    }
+
+
+    .find-section {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    .find-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .find-content {
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .map-container {
+
+        min-height: 300px;
+
+    }
+
+
+    .map-container iframe {
+
+        min-height: 300px;
+
+    }
+
+
+    .map-label {
+
+        top: 30px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+    }
+
+
+    .hear-section {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    .hear-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hear-image {
+
+        min-height: 220px;
+
+    }
+
+}

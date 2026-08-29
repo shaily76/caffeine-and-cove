@@ -1,0 +1,511 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ORDER SUCCESS
+========================================================= */
+
+:root {
+
+    --success-cream: #f8f1e8;
+    --success-white: #fffdf9;
+
+    --success-brown: #80502f;
+    --success-dark: #5d351c;
+
+    --success-text: #302017;
+    --success-muted: #75675d;
+
+    --success-border: #dfd1c2;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.order-success-page,
+.order-success-page * {
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.order-success-section {
+
+    min-height: calc(100vh - 125px);
+
+    padding: 70px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            rgba(248, 241, 232, 0.72),
+            rgba(248, 241, 232, 0.72)
+        ),
+
+        url("../img/cart-hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.order-success-card {
+
+    width: min(560px, 100%);
+
+    padding: 45px 45px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 253, 249, 0.98);
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(55, 35, 22, 0.16);
+
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.success-icon {
+
+    width: 72px;
+
+    height: 72px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f2e5;
+
+}
+
+
+.success-icon span {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #6f965f;
+
+    color: #ffffff;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.success-label {
+
+    color: var(--success-brown);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.order-success-card h1 {
+
+    margin: 9px 0 7px;
+
+    color: var(--success-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 44px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+}
+
+
+.success-message {
+
+    margin: 0;
+
+    color: var(--success-muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.success-divider {
+
+    margin: 20px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.success-divider span {
+
+    width: 55px;
+
+    height: 1px;
+
+    background: #ceb8a2;
+
+}
+
+
+.success-divider b {
+
+    color: var(--success-brown);
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.success-details {
+
+    padding: 17px 20px;
+
+    border: 1px solid var(--success-border);
+
+    border-radius: 10px;
+
+    background: #faf5ef;
+
+}
+
+
+.success-detail-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px dashed #dfd1c2;
+
+}
+
+
+.success-detail-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.success-detail-row span {
+
+    color: var(--success-muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.success-detail-row strong {
+
+    color: var(--success-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.success-detail-row.total-row strong {
+
+    color: var(--success-brown);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.email-confirmation {
+
+    margin-top: 18px;
+
+    padding: 12px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 8px;
+
+    background: #f3eadf;
+
+}
+
+
+.email-confirmation span {
+
+    color: var(--success-brown);
+
+    font-size: 15px;
+
+}
+
+
+.email-confirmation p {
+
+    margin: 0;
+
+    color: var(--success-muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.success-actions {
+
+    margin-top: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.success-primary-button,
+.success-secondary-button {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 25px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.success-primary-button {
+
+    background: var(--success-brown);
+
+    color: #ffffff;
+
+}
+
+
+.success-primary-button:hover {
+
+    background: var(--success-dark);
+
+}
+
+
+.success-secondary-button {
+
+    border: 1px solid var(--success-brown);
+
+    color: var(--success-brown);
+
+    background: transparent;
+
+}
+
+
+.success-secondary-button:hover {
+
+    background: #f3e9de;
+
+}
+
+
+/* =========================================================
+   FOOTER TEXT
+========================================================= */
+
+.success-footer-text {
+
+    margin: 19px 0 0;
+
+    color: #89796d;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+}
+
+
+.success-footer-text strong {
+
+    color: var(--success-brown);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .order-success-section {
+
+        min-height: calc(100vh - 76px);
+
+        padding: 40px 15px;
+
+    }
+
+
+    .order-success-card {
+
+        padding:
+            35px 20px
+            30px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .order-success-card h1 {
+
+        font-size: 37px;
+
+    }
+
+
+    .success-details {
+
+        padding:
+            12px 14px;
+
+    }
+
+
+    .success-detail-row {
+
+        gap: 10px;
+
+    }
+
+}

@@ -1,0 +1,627 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN RESERVATIONS
+   Sidebar styling is handled by sidebar.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8f0e7;
+
+    color: #4a2c1d;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.admin-main {
+
+    margin-left: 218px;
+
+    width: calc(
+        100% - 218px
+    );
+
+    min-height: 100vh;
+
+    padding: 48px 42px 70px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 32px;
+}
+
+
+.page-eyebrow {
+
+    display: block;
+
+    color: #a45d36;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.page-header h1 {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 47px;
+
+    line-height: 1.05;
+
+    color: #482819;
+}
+
+
+.page-header p {
+
+    margin: 9px 0 0;
+
+    color: #876b5b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TOTAL BOX
+========================================================= */
+
+.total-box {
+
+    min-width: 130px;
+
+    padding: 18px 22px;
+
+    background: #fffaf5;
+
+    border: 1px solid #ead9ca;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+
+.total-box strong {
+
+    display: block;
+
+    font-family:
+        Georgia,
+        serif;
+
+    color: #744126;
+
+    font-size: 26px;
+}
+
+
+.total-box span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #876b5b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESERVATION PANEL
+========================================================= */
+
+.reservation-panel {
+
+    background: #fffdf9;
+
+    border: 1px solid #e7d8ca;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            74,
+            44,
+            29,
+            0.07
+        );
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+
+    padding: 25px 27px 23px;
+
+    border-bottom: 1px solid #eee1d7;
+}
+
+
+.panel-header span {
+
+    display: block;
+
+    color: #a45d36;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.panel-header h2 {
+
+    margin: 0;
+
+    color: #4b2c1d;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.reservation-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.reservation-table {
+
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse: collapse;
+}
+
+
+.reservation-table th {
+
+    padding: 14px 16px;
+
+    background: #f8eee5;
+
+    color: #8c624b;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-align: left;
+
+    font-weight: 700;
+}
+
+
+.reservation-table td {
+
+    padding: 17px 16px;
+
+    border-bottom: 1px solid #eee3da;
+
+    vertical-align: middle;
+
+    font-size: 12px;
+}
+
+
+.reservation-table tbody tr {
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.reservation-table tbody tr:hover {
+
+    background: #fff8f1;
+}
+
+
+.reservation-table tbody tr:last-child td {
+
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   RESERVATION ID
+========================================================= */
+
+.reservation-id {
+
+    color: #9a6240;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+.customer-cell {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.customer-cell strong {
+
+    color: #4a2c1d;
+
+    font-size: 12px;
+}
+
+
+.customer-cell small {
+
+    color: #927c6e;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.date-value {
+
+    color: #604333;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.time-value {
+
+    color: #704126;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   GUEST BADGE
+========================================================= */
+
+.guest-badge {
+
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #f3e7dc;
+
+    color: #704126;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-badge {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PENDING
+========================================================= */
+
+.status-pending {
+
+    background: #fff1c9;
+
+    color: #876116;
+}
+
+
+/* =========================================================
+   CONFIRMED
+========================================================= */
+
+.status-confirmed {
+
+    background: #dff1e4;
+
+    color: #317044;
+}
+
+
+/* =========================================================
+   COMPLETED
+========================================================= */
+
+.status-completed {
+
+    background: #e8ddf2;
+
+    color: #65437d;
+}
+
+
+/* =========================================================
+   CANCELLED
+========================================================= */
+
+.status-cancelled {
+
+    background: #f8dddd;
+
+    color: #963e3e;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.view-button {
+
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    background: #f0e2d6;
+
+    color: #633a24;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.view-button:hover {
+
+    background: #e2cbb9;
+
+    transform: translateX(2px);
+}
+
+
+.no-action {
+
+    color: #aaa;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+
+    padding: 75px 25px;
+
+    text-align: center;
+}
+
+
+.empty-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #f4e7dc;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.empty-state h3 {
+
+    margin: 0 0 8px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    color: #4a2c1d;
+
+    font-size: 23px;
+}
+
+
+.empty-state p {
+
+    margin: 0;
+
+    color: #8d786b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-main {
+
+        margin-left: 190px;
+
+        width: calc(
+            100% - 190px
+        );
+
+        padding: 35px 25px 60px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .admin-main {
+
+        margin-left: 70px;
+
+        width: calc(
+            100% - 70px
+        );
+
+        padding: 28px 16px 50px;
+    }
+
+
+    .page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .total-box {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .page-header h1 {
+
+        font-size: 34px;
+    }
+
+
+    .panel-header {
+
+        padding: 20px;
+    }
+
+}

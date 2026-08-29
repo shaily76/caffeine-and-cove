@@ -1,0 +1,640 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMINLTE 3 - CUSTOM ADMIN THEME
+   ========================================================= */
+
+
+/* =========================================================
+   01. COLOR VARIABLES
+   ========================================================= */
+
+:root {
+    --coffee-dark: #4A2C1D;
+    --coffee-brown: #7B4728;
+    --coffee-medium: #8B4513;
+    --coffee-gold: #D8A15B;
+    --coffee-gold-dark: #C78F45;
+
+    --cream: #FFF8F2;
+    --cream-dark: #F5E8DA;
+    --white: #FFFFFF;
+
+    --text-dark: #35231B;
+    --text-medium: #6F5548;
+    --text-light: #9A8477;
+
+    --border: #E5D5C8;
+
+    --success: #5E8C61;
+    --danger: #B85C5C;
+    --warning: #C28A3D;
+}
+
+
+/* =========================================================
+   02. BODY
+   ========================================================= */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+    font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   03. MAIN CONTENT AREA
+   ========================================================= */
+
+.content-wrapper {
+    background-color: var(--cream) !important;
+}
+
+.content {
+    padding-bottom: 25px;
+}
+
+
+/* =========================================================
+   04. NAVBAR
+   ========================================================= */
+
+.main-header {
+    background-color: var(--white) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.main-header .nav-link {
+    color: var(--text-medium) !important;
+}
+
+.main-header .nav-link:hover {
+    color: var(--coffee-brown) !important;
+}
+
+.main-header .fa-bell,
+.main-header .fa-user-circle {
+    color: var(--coffee-brown);
+}
+
+
+/* =========================================================
+   05. SIDEBAR
+   ========================================================= */
+
+.main-sidebar {
+    background-color: var(--coffee-dark) !important;
+}
+
+.main-sidebar .brand-link {
+    background-color: var(--coffee-dark) !important;
+    border-bottom: 1px solid rgba(216, 161, 91, 0.25) !important;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sidebar .brand-text {
+    color: var(--coffee-gold) !important;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   06. SIDEBAR USER PANEL
+   ========================================================= */
+
+.main-sidebar .user-panel {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.main-sidebar .user-panel .info a {
+    color: var(--white) !important;
+    font-size: 16px;
+}
+
+.main-sidebar .user-panel .info a:hover {
+    color: var(--coffee-gold) !important;
+}
+
+
+/* =========================================================
+   07. SIDEBAR MENU
+   ========================================================= */
+
+.nav-sidebar > .nav-item {
+    margin-bottom: 3px;
+}
+
+.nav-sidebar > .nav-item > .nav-link {
+    color: #F8EDE5 !important;
+    margin: 3px 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-sidebar > .nav-item > .nav-link:hover {
+    background-color: var(--coffee-brown) !important;
+    color: var(--white) !important;
+}
+
+
+/* ACTIVE MENU */
+
+.nav-sidebar > .nav-item > .nav-link.active {
+    background-color: var(--coffee-gold) !important;
+    color: var(--coffee-dark) !important;
+    font-weight: 600;
+    box-shadow: none !important;
+}
+
+.nav-sidebar > .nav-item > .nav-link.active .nav-icon {
+    color: var(--coffee-dark) !important;
+}
+
+
+/* ICONS */
+
+.nav-sidebar .nav-icon {
+    color: var(--coffee-gold) !important;
+}
+
+.nav-sidebar .nav-link:hover .nav-icon {
+    color: var(--white) !important;
+}
+
+
+/* SUBMENU */
+
+.nav-treeview > .nav-item > .nav-link {
+    color: #EEDFD4 !important;
+    margin-left: 18px;
+    border-radius: 7px;
+}
+
+.nav-treeview > .nav-item > .nav-link:hover {
+    background-color: rgba(216, 161, 91, 0.16) !important;
+}
+
+.nav-treeview > .nav-item > .nav-link.active {
+    background-color: rgba(216, 161, 91, 0.22) !important;
+    color: var(--coffee-gold) !important;
+}
+
+.nav-treeview .nav-icon {
+    color: var(--coffee-gold) !important;
+}
+
+
+/* =========================================================
+   08. PAGE HEADER
+   ========================================================= */
+
+.content-header h1 {
+    color: var(--coffee-dark);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+}
+
+.breadcrumb-item {
+    color: var(--text-light);
+}
+
+.breadcrumb-item a {
+    color: var(--coffee-brown);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-medium);
+}
+
+
+/* =========================================================
+   09. CARDS
+   ========================================================= */
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(74, 44, 29, 0.07);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    color: var(--coffee-dark);
+    font-weight: 600;
+}
+
+.card-tools .btn {
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   10. SMALL DASHBOARD BOXES
+   ========================================================= */
+
+.small-box {
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(74, 44, 29, 0.10);
+    margin-bottom: 20px;
+}
+
+.small-box .inner {
+    padding: 20px;
+}
+
+.small-box h3 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.small-box p {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.small-box .icon {
+    top: 12px;
+    right: 18px;
+}
+
+.small-box .icon > i {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 72px;
+}
+
+.small-box-footer {
+    padding: 9px 15px !important;
+    font-size: 15px;
+}
+
+
+/* COFFEE BOX */
+
+.small-box.bg-coffee {
+    background-color: var(--coffee-brown) !important;
+    color: var(--white) !important;
+}
+
+
+/* GOLD BOX */
+
+.small-box.bg-gold {
+    background-color: var(--coffee-gold) !important;
+    color: var(--coffee-dark) !important;
+}
+
+.small-box.bg-gold .icon > i {
+    color: rgba(74, 44, 29, 0.18);
+}
+
+.small-box.bg-gold .small-box-footer {
+    background-color: rgba(74, 44, 29, 0.10);
+    color: var(--coffee-dark);
+}
+
+
+/* DARK COFFEE BOX */
+
+.small-box.bg-dark-coffee {
+    background-color: var(--coffee-dark) !important;
+    color: var(--white) !important;
+}
+
+
+/* =========================================================
+   11. BUTTONS
+   ========================================================= */
+
+.btn-coffee {
+    background-color: var(--coffee-brown) !important;
+    border: 1px solid var(--coffee-brown) !important;
+    color: var(--white) !important;
+}
+
+.btn-coffee:hover {
+    background-color: var(--coffee-dark) !important;
+    border-color: var(--coffee-dark) !important;
+    color: var(--white) !important;
+}
+
+
+.btn-gold {
+    background-color: var(--coffee-gold) !important;
+    border: 1px solid var(--coffee-gold) !important;
+    color: var(--coffee-dark) !important;
+    font-weight: 600;
+}
+
+.btn-gold:hover {
+    background-color: var(--coffee-gold-dark) !important;
+    border-color: var(--coffee-gold-dark) !important;
+    color: var(--coffee-dark) !important;
+}
+
+
+/* =========================================================
+   12. TABLES
+   ========================================================= */
+
+.table {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.table thead th {
+    background-color: var(--cream-dark);
+    color: var(--coffee-dark);
+    border-top: 0;
+    border-bottom: 2px solid var(--coffee-gold);
+    font-weight: 600;
+}
+
+.table tbody td {
+    border-color: #EFE4DC;
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #FFF6EE;
+}
+
+
+/* =========================================================
+   13. BADGES
+   ========================================================= */
+
+.badge-coffee {
+    background-color: var(--coffee-brown) !important;
+    color: var(--white) !important;
+}
+
+.badge-gold {
+    background-color: var(--coffee-gold) !important;
+    color: var(--coffee-dark) !important;
+}
+
+.badge-success {
+    background-color: var(--success) !important;
+}
+
+.badge-danger {
+    background-color: var(--danger) !important;
+}
+
+.badge-warning {
+    background-color: var(--warning) !important;
+    color: var(--white) !important;
+}
+
+
+/* =========================================================
+   14. FORMS
+   ========================================================= */
+
+.form-control,
+.custom-select {
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.form-control:focus,
+.custom-select:focus {
+    border-color: var(--coffee-gold);
+    box-shadow: 0 0 0 0.15rem rgba(216, 161, 91, 0.20);
+}
+
+
+/* =========================================================
+   15. INPUT GROUP
+   ========================================================= */
+
+.input-group-text {
+    background-color: var(--cream-dark);
+    border-color: var(--border);
+    color: var(--coffee-brown);
+}
+
+
+/* =========================================================
+   16. ALERTS
+   ========================================================= */
+
+.alert-coffee {
+    background-color: var(--cream-dark);
+    border: 1px solid var(--coffee-gold);
+    color: var(--coffee-dark);
+}
+
+
+/* =========================================================
+   17. INFO BOXES
+   ========================================================= */
+
+.info-box {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(74, 44, 29, 0.07);
+}
+
+.info-box-icon {
+    background-color: var(--coffee-brown) !important;
+    color: var(--coffee-gold) !important;
+    border-radius: 9px 0 0 9px;
+}
+
+.info-box-content {
+    color: var(--text-dark);
+}
+
+.info-box-number {
+    color: var(--coffee-dark);
+}
+
+
+/* =========================================================
+   18. PAGINATION
+   ========================================================= */
+
+.page-link {
+    color: var(--coffee-brown);
+    border-color: var(--border);
+}
+
+.page-link:hover {
+    color: var(--coffee-dark);
+    background-color: var(--cream-dark);
+    border-color: var(--coffee-gold);
+}
+
+.page-item.active .page-link {
+    background-color: var(--coffee-brown);
+    border-color: var(--coffee-brown);
+}
+
+
+/* =========================================================
+   19. DROPDOWNS
+   ========================================================= */
+
+.dropdown-menu {
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 15px rgba(74, 44, 29, 0.12);
+}
+
+.dropdown-item {
+    color: var(--text-dark);
+}
+
+.dropdown-item:hover {
+    background-color: var(--cream-dark);
+    color: var(--coffee-dark);
+}
+
+
+/* =========================================================
+   20. MODALS
+   ========================================================= */
+
+.modal-content {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: var(--cream-dark);
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-title {
+    color: var(--coffee-dark);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   21. FOOTER
+   ========================================================= */
+
+.main-footer {
+    background-color: var(--white) !important;
+    border-top: 1px solid var(--border) !important;
+    color: var(--text-light);
+}
+
+.main-footer strong {
+    color: var(--coffee-brown);
+}
+
+.main-footer b {
+    color: var(--coffee-brown);
+}
+
+
+/* =========================================================
+   22. LINKS
+   ========================================================= */
+
+a {
+    color: var(--coffee-brown);
+}
+
+a:hover {
+    color: var(--coffee-dark);
+}
+
+
+/* =========================================================
+   23. SCROLLBAR
+   ========================================================= */
+
+.main-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main-sidebar::-webkit-scrollbar-track {
+    background: var(--coffee-dark);
+}
+
+.main-sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--coffee-brown);
+    border-radius: 10px;
+}
+
+.main-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--coffee-gold);
+}
+
+
+/* =========================================================
+   24. NAVBAR MENU BUTTON
+   ========================================================= */
+
+.navbar .nav-link[data-widget="pushmenu"] {
+    color: var(--coffee-brown) !important;
+}
+
+.navbar .nav-link[data-widget="pushmenu"]:hover {
+    color: var(--coffee-dark) !important;
+}
+
+
+/* =========================================================
+   25. LOGIN / AUTH STYLE SUPPORT
+   ========================================================= */
+
+.login-page,
+.register-page {
+    background-color: var(--cream);
+}
+
+.login-box-card {
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   26. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .content-header h1 {
+        font-size: 25px;
+    }
+
+    .small-box h3 {
+        font-size: 28px;
+    }
+
+    .small-box .icon > i {
+        font-size: 55px;
+    }
+
+    .main-sidebar .brand-text {
+        font-size: 19px;
+    }
+}

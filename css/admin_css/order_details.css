@@ -1,0 +1,867 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN - ORDER DETAILS
+   Sidebar styling is handled by sidebar.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7efe5;
+
+    color: #3d2418;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.admin-main {
+
+    margin-left: 220px;
+
+    min-height: 100vh;
+
+    padding: 34px 40px 60px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.back-link {
+
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #8b4f2c;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.back-link:hover {
+
+    text-decoration: underline;
+}
+
+
+.page-eyebrow {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #a5653a;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+
+.page-header h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    color: #3d2418;
+
+    margin-bottom: 5px;
+}
+
+
+.page-header p {
+
+    color: #80685a;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ORDER STATUS BADGE
+========================================================= */
+
+.order-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 18px;
+
+    min-width: 80px;
+
+    border-radius: 22px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: capitalize;
+
+    white-space: nowrap;
+}
+
+
+.order-status.pending {
+
+    background: #fff1c9;
+
+    color: #856404;
+
+    border: 1px solid #f1d98c;
+}
+
+
+.order-status.processing {
+
+    background: #eadff4;
+
+    color: #65417f;
+
+    border: 1px solid #d6c2e7;
+}
+
+
+.order-status.completed {
+
+    background: #dff2e4;
+
+    color: #28703a;
+
+    border: 1px solid #bfe0c8;
+}
+
+
+.order-status.cancelled {
+
+    background: #f8d9dc;
+
+    color: #8a2d35;
+
+    border: 1px solid #edbfc4;
+}
+
+
+/* =========================================================
+   STATUS UPDATE CARD
+========================================================= */
+
+.status-control-card {
+
+    background: #fffdf9;
+
+    border: 1px solid #ead8c8;
+
+    border-radius: 16px;
+
+    padding: 22px 25px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.status-control-left {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.status-control-label {
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: #a5653a;
+
+    font-weight: 700;
+}
+
+
+.status-control-title {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color: #4a2c1d;
+}
+
+
+.status-current-text {
+
+    color: #80685a;
+
+    font-size: 12px;
+}
+
+
+.status-current-text strong {
+
+    color: #4a2c1d;
+}
+
+
+/* =========================================================
+   STATUS FORM
+========================================================= */
+
+.status-control-form {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.status-select {
+
+    min-width: 165px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #dec8b5;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #4a2c1d;
+
+    font-size: 13px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.status-select:focus {
+
+    border-color: #8b4f2c;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            139,
+            79,
+            44,
+            0.08
+        );
+}
+
+
+.status-update-btn {
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #704426;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.status-update-btn:hover {
+
+    background: #4a2c1d;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DETAILS CARD
+========================================================= */
+
+.details-card {
+
+    background: #ffffff;
+
+    border: 1px solid #eadbcb;
+
+    border-radius: 16px;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.card-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px 28px;
+
+    border-bottom: 1px solid #eadbcb;
+}
+
+
+.card-eyebrow {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    color: #a5653a;
+
+    font-weight: 700;
+}
+
+
+.card-heading h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color: #3d2418;
+}
+
+
+/* =========================================================
+   CUSTOMER GRID
+========================================================= */
+
+.customer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+.info-box {
+
+    min-height: 85px;
+
+    padding: 18px 20px;
+
+    border-right: 1px solid #eadbcb;
+
+    border-bottom: 1px solid #eadbcb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+.info-box:nth-child(3),
+.info-box:nth-child(6) {
+
+    border-right: none;
+}
+
+
+.info-box:nth-child(4),
+.info-box:nth-child(5),
+.info-box:nth-child(6) {
+
+    border-bottom: none;
+}
+
+
+.info-label {
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #a58b7a;
+
+    font-weight: 700;
+}
+
+
+.info-box strong {
+
+    font-size: 12px;
+
+    color: #3d2418;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   ITEM COUNT
+========================================================= */
+
+.item-count {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 6px 12px;
+
+    background: #f4e6d7;
+
+    color: #704426;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ITEMS TABLE
+========================================================= */
+
+.items-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.items-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+}
+
+
+.items-table th {
+
+    padding: 12px 16px;
+
+    background: #f7efe5;
+
+    color: #8b6d5b;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    text-align: left;
+
+    font-weight: 700;
+}
+
+
+.items-table td {
+
+    padding: 17px 16px;
+
+    border-bottom: 1px solid #eadbcb;
+
+    color: #4a2c1d;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+
+.items-table tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+.items-table td strong {
+
+    color: #3d2418;
+}
+
+
+.quantity {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 10px;
+
+    background: #f4e6d7;
+
+    border-radius: 15px;
+
+    color: #704426;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.no-items {
+
+    text-align: center;
+
+    padding: 35px !important;
+
+    color: #80685a !important;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.summary-card {
+
+    background: #ffffff;
+
+    border: 1px solid #eadbcb;
+
+    border-radius: 16px;
+
+    padding: 27px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.summary-left h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    color: #3d2418;
+}
+
+
+.summary-right {
+
+    width: 310px;
+}
+
+
+.summary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 6px 0;
+
+    font-size: 12px;
+}
+
+
+.summary-row span {
+
+    color: #80685a;
+}
+
+
+.summary-row strong {
+
+    color: #4a2c1d;
+}
+
+
+.summary-divider {
+
+    height: 1px;
+
+    background: #eadbcb;
+
+    margin: 10px 0;
+}
+
+
+.summary-total {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 4px;
+}
+
+
+.summary-total span {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #4a2c1d;
+}
+
+
+.summary-total strong {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+
+    color: #a45e32;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-main {
+
+        padding: 30px;
+    }
+
+
+    .customer-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .info-box:nth-child(3),
+    .info-box:nth-child(6) {
+
+        border-right: 1px solid #eadbcb;
+    }
+
+
+    .info-box:nth-child(2),
+    .info-box:nth-child(4),
+    .info-box:nth-child(6) {
+
+        border-right: none;
+    }
+
+
+    .info-box:nth-child(5) {
+
+        border-bottom: 1px solid #eadbcb;
+    }
+
+
+    .info-box:nth-child(6) {
+
+        border-bottom: none;
+    }
+
+
+    .status-control-card {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .admin-main {
+
+        margin-left: 0;
+
+        padding: 25px 18px 40px;
+    }
+
+
+    .page-header {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .status-control-form {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .status-select,
+    .status-update-btn {
+
+        width: 100%;
+    }
+
+
+    .customer-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-box {
+
+        border-right: none !important;
+
+        border-bottom: 1px solid #eadbcb !important;
+    }
+
+
+    .info-box:last-child {
+
+        border-bottom: none !important;
+    }
+
+
+    .summary-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .summary-right {
+
+        width: 100%;
+    }
+
+}

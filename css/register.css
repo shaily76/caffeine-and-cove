@@ -1,0 +1,910 @@
+/* =========================================================
+   CAFFEINE & COVE
+   REGISTER PAGE
+========================================================= */
+
+:root {
+
+    --register-bg: #f8f4ee;
+
+    --register-card: #fffdf9;
+
+    --register-brown: #80583b;
+
+    --register-dark-brown: #68442d;
+
+    --register-text: #30251f;
+
+    --register-muted: #766c64;
+
+    --register-border: #dfd3c7;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.register-page,
+.register-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   REGISTER PAGE
+========================================================= */
+
+.register-page {
+
+    width: 100%;
+
+    min-height: calc(100vh - 125px);
+
+    padding: 44px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            rgba(43, 29, 20, 0.30),
+            rgba(43, 29, 20, 0.30)
+        ),
+
+        url("../img/register-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.register-card {
+
+    width: min(980px, 100%);
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+
+    overflow: hidden;
+
+    background: var(--register-card);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 28px 75px rgba(39, 25, 17, 0.18);
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.register-welcome {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 48px 42px;
+
+    background: rgba(255, 253, 249, 0.985);
+
+    border-right: 1px solid #e2d8ce;
+}
+
+
+.welcome-content {
+
+    width: 100%;
+
+    max-width: 330px;
+
+    text-align: center;
+
+    color: var(--register-brown);
+}
+
+
+/* =========================================================
+   CUP
+========================================================= */
+
+.welcome-cup {
+
+    width: 92px;
+
+    height: 92px;
+
+    margin: 0 auto 26px;
+
+    color: var(--register-brown);
+}
+
+
+.welcome-cup svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   WELCOME TITLE
+========================================================= */
+
+.welcome-content h2 {
+
+    margin: 0 0 2px;
+
+    color: var(--register-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+}
+
+
+.welcome-content h1 {
+
+    margin: 0;
+
+    color: var(--register-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 37px;
+
+    line-height: 1.18;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WELCOME DIVIDER
+========================================================= */
+
+.welcome-divider {
+
+    margin: 27px auto 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.welcome-divider span {
+
+    width: 76px;
+
+    height: 1px;
+
+    background: #decfc2;
+}
+
+
+.welcome-divider b {
+
+    color: #ad8c70;
+
+    font-size: 12px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   WELCOME DESCRIPTION
+========================================================= */
+
+.welcome-content p {
+
+    max-width: 270px;
+
+    margin: 0 auto;
+
+    color: #675e57;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LEAF DECORATION
+========================================================= */
+
+.welcome-leaves {
+
+    width: 185px;
+
+    margin: 47px auto 14px;
+
+    color: #a9896b;
+}
+
+
+.welcome-leaves svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+
+/* =========================================================
+   COFFEE BEANS
+========================================================= */
+
+.coffee-beans {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+}
+
+
+.coffee-beans span {
+
+    position: relative;
+
+    width: 34px;
+
+    height: 20px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background: #80583b;
+
+    transform: rotate(34deg);
+
+    box-shadow:
+        0 4px 9px rgba(70, 44, 29, 0.13);
+}
+
+
+.coffee-beans span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 3px;
+
+    width: 2px;
+
+    height: 14px;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    transform: rotate(-15deg);
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.register-form-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 42px 47px;
+
+    background: #fffdf9;
+}
+
+
+.register-form-container {
+
+    width: 100%;
+
+    max-width: 520px;
+}
+
+
+/* =========================================================
+   FORM HEADING
+========================================================= */
+
+.form-heading {
+
+    margin-bottom: 27px;
+
+    text-align: center;
+}
+
+
+.form-heading h2 {
+
+    margin: 0 0 8px;
+
+    color: var(--register-text);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    line-height: 1.12;
+
+    font-weight: 600;
+}
+
+
+.form-heading p {
+
+    margin: 0;
+
+    color: #746a62;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.register-form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--register-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.input-wrap {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+.input-wrap input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 43px 0 43px;
+
+    border: 1px solid var(--register-border);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fffefa;
+
+    color: var(--register-text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.input-wrap input::placeholder {
+
+    color: #a69b92;
+}
+
+
+.input-wrap input:focus {
+
+    border-color: var(--register-brown);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(128, 88, 59, 0.07);
+}
+
+
+/* =========================================================
+   FIELD ICON
+========================================================= */
+
+.field-icon {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    width: 19px;
+
+    height: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #89796c;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+.field-icon svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    display: block;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.show-password {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    width: 24px;
+
+    height: 24px;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #8c7b6e;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.terms {
+
+    margin-top: 2px;
+}
+
+
+.terms label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: #766c64;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+.terms input {
+
+    width: 14px;
+
+    height: 14px;
+
+    flex-shrink: 0;
+
+    margin: 1px 0 0;
+
+    accent-color: var(--register-brown);
+}
+
+
+.terms a {
+
+    color: var(--register-brown);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.terms a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.register-button {
+
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: var(--register-brown);
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.register-button:hover {
+
+    background: var(--register-dark-brown);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px rgba(95, 63, 43, 0.16);
+}
+
+
+.button-user {
+
+    width: 20px;
+
+    height: 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.6);
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-prompt {
+
+    margin: 1px 0 0;
+
+    text-align: center;
+
+    color: #766c64;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+}
+
+
+.login-prompt a {
+
+    margin-left: 4px;
+
+    color: var(--register-brown);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.login-prompt a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .register-page {
+
+        padding: 40px 20px;
+    }
+
+
+    .register-card {
+
+        width: min(900px, 100%);
+
+        grid-template-columns: 38% 62%;
+    }
+
+
+    .register-welcome {
+
+        padding: 40px 25px;
+    }
+
+
+    .register-form-area {
+
+        padding: 38px 34px;
+    }
+
+
+    .welcome-content h1 {
+
+        font-size: 32px;
+    }
+
+
+    .form-heading h2 {
+
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .register-page {
+
+        min-height: calc(100vh - 76px);
+
+        padding: 25px 15px;
+    }
+
+
+    .register-card {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        border-radius: 18px;
+    }
+
+
+    .register-welcome {
+
+        padding: 35px 25px;
+
+        min-height: 310px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #e2d8ce;
+    }
+
+
+    .register-form-area {
+
+        padding: 36px 24px;
+    }
+
+
+    .welcome-cup {
+
+        width: 78px;
+
+        height: 78px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .welcome-content h2 {
+
+        font-size: 22px;
+    }
+
+
+    .welcome-content h1 {
+
+        font-size: 31px;
+    }
+
+
+    .welcome-leaves {
+
+        margin-top: 32px;
+    }
+
+
+    .register-form {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .full-width {
+
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .register-card {
+
+        border-radius: 16px;
+    }
+
+
+    .register-form-area {
+
+        padding:
+            30px
+            18px
+            28px;
+    }
+
+
+    .register-welcome {
+
+        padding:
+            30px
+            18px;
+    }
+
+
+    .form-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .form-heading p {
+
+        font-size: 12px;
+    }
+
+}

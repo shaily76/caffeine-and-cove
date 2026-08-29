@@ -1,0 +1,22 @@
+/include/config.php
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration
+config.local.php
+
+# Logs
+*.log
+*.tmp
+
+# Windows / Mac files
+Thumbs.db
+.DS_Store
+
+# VS Code
+.vscode/
+
+# PHPStorm
+.idea/

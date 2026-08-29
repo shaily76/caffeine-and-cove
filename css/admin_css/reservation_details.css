@@ -1,0 +1,728 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN RESERVATION DETAILS
+   Sidebar styling is handled by sidebar.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7eee4;
+
+    color: #4a2c1d;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.admin-main {
+
+    margin-left: 218px;
+
+    width: calc(
+        100% - 218px
+    );
+
+    min-height: 100vh;
+
+    padding: 40px 34px 70px;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.page-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.back-link {
+
+    color: #8b4f2b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+.back-link:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 88px;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.status-pending {
+
+    background: #fff0c9;
+
+    color: #9a6a00;
+}
+
+
+.status-confirmed {
+
+    background: #dff3e5;
+
+    color: #18733b;
+}
+
+
+.status-completed {
+
+    background: #dcecff;
+
+    color: #255b91;
+}
+
+
+.status-cancelled {
+
+    background: #f9dede;
+
+    color: #a02c2c;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.page-heading {
+
+    margin-bottom: 24px;
+}
+
+
+.eyebrow {
+
+    color: #a85e31;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.page-heading h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    color: #45291d;
+
+    margin-bottom: 8px;
+}
+
+
+.page-heading p {
+
+    font-size: 13px;
+
+    color: #8a6c5b;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.message {
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+}
+
+
+.success-message {
+
+    background: #e4f5e8;
+
+    color: #1c7540;
+
+    border: 1px solid #c4e8cd;
+}
+
+
+.error-message {
+
+    background: #fae5e3;
+
+    color: #a4312a;
+
+    border: 1px solid #efc6c2;
+}
+
+
+/* =========================================================
+   DETAILS CARD
+========================================================= */
+
+.details-card {
+
+    background: #fffdfa;
+
+    border: 1px solid #ead8c8;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 10px 28px
+        rgba(
+            77,
+            44,
+            25,
+            0.05
+        );
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.card-heading {
+
+    padding: 23px 25px;
+
+    border-bottom: 1px solid #eee0d4;
+}
+
+
+.card-eyebrow {
+
+    color: #a85e31;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+.card-heading h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #4a2c1d;
+
+    font-size: 24px;
+}
+
+
+.card-heading p {
+
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    color: #8a6c5b;
+}
+
+
+/* =========================================================
+   CUSTOMER INFORMATION
+========================================================= */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+.info-item {
+
+    min-height: 92px;
+
+    padding: 20px 22px;
+
+    border-right: 1px solid #eee0d4;
+
+    border-bottom: 1px solid #eee0d4;
+}
+
+
+.info-item:nth-child(3n) {
+
+    border-right: none;
+}
+
+
+.info-item:nth-last-child(-n+3) {
+
+    border-bottom: none;
+}
+
+
+.info-item span {
+
+    display: block;
+
+    color: #a27b65;
+
+    font-size: 8px;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 8px;
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    color: #42271b;
+
+    font-size: 12px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   RESERVATION GRID
+========================================================= */
+
+.reservation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+
+.reservation-box {
+
+    padding: 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border-right: 1px solid #eee0d4;
+}
+
+
+.reservation-box:last-child {
+
+    border-right: none;
+}
+
+
+.reservation-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #f5e6d8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+
+.reservation-box span {
+
+    display: block;
+
+    color: #a27b65;
+
+    font-size: 8px;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 7px;
+}
+
+
+.reservation-box strong {
+
+    color: #42271b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SPECIAL REQUEST
+========================================================= */
+
+.special-request {
+
+    margin: 20px 24px;
+
+    padding: 18px;
+
+    background: #faf3ec;
+
+    border: 1px solid #ead8c8;
+
+    border-radius: 10px;
+
+    color: #684b3b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: 60px;
+}
+
+
+.empty-request {
+
+    color: #9d8576;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   STATUS FORM
+========================================================= */
+
+.status-card {
+
+    margin-bottom: 0;
+}
+
+
+.status-form {
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 16px;
+}
+
+
+.status-select-wrapper {
+
+    flex: 1;
+}
+
+
+.status-select-wrapper label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #5a3929;
+}
+
+
+.status-select-wrapper select {
+
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dfcbb9;
+
+    border-radius: 9px;
+
+    background: #fffdfa;
+
+    color: #4a2c1d;
+
+    font-size: 12px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.status-select-wrapper select:focus {
+
+    border-color: #9a5a31;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            154,
+            90,
+            49,
+            0.08
+        );
+}
+
+
+/* =========================================================
+   UPDATE BUTTON
+========================================================= */
+
+.update-button {
+
+    height: 46px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #874b29;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.update-button:hover {
+
+    background: #6f3c21;
+
+    transform: translateY(-1px);
+}
+
+
+.update-button:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .reservation-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .reservation-box:nth-child(2) {
+
+        border-right: none;
+    }
+
+
+    .reservation-box {
+
+        border-bottom:
+            1px solid #eee0d4;
+    }
+
+
+    .reservation-box:nth-last-child(-n+2) {
+
+        border-bottom: none;
+    }
+
+
+    .info-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .info-item:nth-child(3n) {
+
+        border-right:
+            1px solid #eee0d4;
+    }
+
+
+    .info-item:nth-child(2n) {
+
+        border-right: none;
+    }
+
+
+    .info-item:nth-last-child(-n+3) {
+
+        border-bottom:
+            1px solid #eee0d4;
+    }
+
+
+    .info-item:nth-last-child(-n+2) {
+
+        border-bottom: none;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .admin-main {
+
+        margin-left: 70px;
+
+        width: calc(
+            100% - 70px
+        );
+
+        padding: 28px 18px 50px;
+    }
+
+
+    .page-heading h1 {
+
+        font-size: 34px;
+    }
+
+
+    .info-grid,
+    .reservation-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .info-item,
+    .reservation-box {
+
+        border-right: none !important;
+
+        border-bottom:
+            1px solid #eee0d4 !important;
+    }
+
+
+    .info-item:last-child,
+    .reservation-box:last-child {
+
+        border-bottom: none !important;
+    }
+
+
+    .status-form {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .update-button {
+
+        width: 100%;
+    }
+
+}

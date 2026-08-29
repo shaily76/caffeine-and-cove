@@ -1,0 +1,620 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN - EDIT PRODUCT
+   Sidebar styling is handled by sidebar.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    background: #f8f0e7;
+
+    color: #432719;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.admin-main {
+
+    margin-left: 218px;
+
+    min-height: 100vh;
+
+    padding: 45px 42px 70px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.page-header {
+
+    margin-bottom: 28px;
+}
+
+
+.back-link {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: #8b502d;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.back-link:hover {
+
+    text-decoration: underline;
+}
+
+
+.eyebrow {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a45e35;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+}
+
+
+.page-header h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 45px;
+
+    line-height: 1.05;
+
+    color: #432719;
+}
+
+
+.page-header p {
+
+    margin-top: 9px;
+
+    color: #876c5d;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.message {
+
+    margin-bottom: 22px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.message.error {
+
+    background: #fde4e1;
+
+    border: 1px solid #f2c6c0;
+
+    color: #983b32;
+}
+
+
+.message.success {
+
+    background: #e3f4e7;
+
+    border: 1px solid #c2e2c9;
+
+    color: #28733c;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+
+    background: #fffdf9;
+
+    border: 1px solid #e8d8c9;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            72,
+            42,
+            25,
+            0.06
+        );
+
+    overflow: hidden;
+}
+
+
+.product-form {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(320px, 0.85fr);
+}
+
+
+/* =========================================================
+   FORM AREAS
+========================================================= */
+
+.form-left,
+.form-right {
+
+    padding: 30px;
+}
+
+
+.form-left {
+
+    border-right: 1px solid #eadccf;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+
+    margin-bottom: 25px;
+}
+
+
+.section-title span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a45e35;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.section-title h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+    color: #432719;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 19px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #573727;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid #dfcdbd;
+
+    border-radius: 9px;
+
+    background: #fffdfa;
+
+    color: #432719;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-group input,
+.form-group select {
+
+    height: 48px;
+
+    padding: 0 14px;
+}
+
+
+.form-group textarea {
+
+    min-height: 120px;
+
+    padding: 13px 14px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #9b5c36;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            155,
+            92,
+            54,
+            0.09
+        );
+}
+
+
+/* =========================================================
+   CURRENT IMAGE
+========================================================= */
+
+.current-image-box {
+
+    width: 100%;
+
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    border: 1px solid #e5d4c5;
+
+    background: #f2e5d9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.current-image-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.image-fallback {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+
+    color: #9a6040;
+}
+
+
+.current-image-name {
+
+    margin: 10px 0 20px;
+
+    color: #907567;
+
+    font-size: 11px;
+}
+
+
+.current-image-name strong {
+
+    color: #5d3b2a;
+
+    word-break: break-all;
+}
+
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.upload-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #573727;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+#image {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px dashed #cdb8a6;
+
+    border-radius: 9px;
+
+    background: #fbf4ed;
+
+    font-size: 11px;
+
+    color: #704a34;
+}
+
+
+.upload-note {
+
+    margin-top: 9px;
+
+    color: #958073;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.form-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+.cancel-button,
+.save-button {
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    border-radius: 9px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.cancel-button {
+
+    flex: 1;
+
+    border: 1px solid #dfcdbd;
+
+    background: #f8eee5;
+
+    color: #70462e;
+}
+
+
+.cancel-button:hover {
+
+    background: #f0dfd1;
+}
+
+
+.save-button {
+
+    flex: 1.4;
+
+    border: none;
+
+    background: #7e492a;
+
+    color: #ffffff;
+}
+
+
+.save-button:hover {
+
+    background: #5f321e;
+}
+
+
+.save-button span {
+
+    margin-left: 9px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .admin-main {
+
+        margin-left: 190px;
+
+        padding: 35px 25px;
+    }
+
+
+    .product-form {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-left {
+
+        border-right: none;
+
+        border-bottom: 1px solid #eadccf;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .admin-main {
+
+        margin-left: 70px;
+
+        padding: 25px 15px 50px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 36px;
+    }
+
+
+    .form-left,
+    .form-right {
+
+        padding: 22px 18px;
+    }
+
+
+    .current-image-box {
+
+        height: 210px;
+    }
+
+
+    .form-actions {
+
+        flex-direction: column;
+    }
+
+
+    .cancel-button,
+    .save-button {
+
+        width: 100%;
+    }
+
+}

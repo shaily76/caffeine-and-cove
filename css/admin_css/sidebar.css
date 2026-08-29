@@ -1,0 +1,288 @@
+/* =========================================================
+   CAFFEINE & COVE
+   COMMON ADMIN SIDEBAR CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET FOR SIDEBAR
+========================================================= */
+
+.admin-sidebar,
+.admin-sidebar * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.admin-sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 218px;
+    height: 100vh;
+
+    background: #4a2c1d;
+
+    color: #ffffff;
+
+    padding: 30px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.admin-logo {
+
+    text-align: center;
+
+    padding-bottom: 28px;
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.15);
+
+    flex-shrink: 0;
+}
+
+
+.admin-logo h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    margin: 0;
+}
+
+
+.admin-logo span {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #d8a15b;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.admin-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 28px;
+
+    flex: 1;
+}
+
+
+.admin-nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 14px;
+
+    border-radius: 9px;
+
+    color: #f9eee5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   NAV ICON
+========================================================= */
+
+.admin-nav a span {
+
+    width: 22px;
+
+    min-width: 22px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.admin-nav a:hover {
+
+    background: #704426;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+========================================================= */
+
+.admin-nav a.active {
+
+    background: #704426;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   LOGOUT AREA
+========================================================= */
+
+.admin-sidebar-bottom {
+
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.admin-logout {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border-radius: 9px;
+
+    color: #f9eee5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   LOGOUT ICON
+========================================================= */
+
+.admin-logout span {
+
+    width: 22px;
+
+    min-width: 22px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   LOGOUT HOVER
+========================================================= */
+
+.admin-logout:hover {
+
+    background: #704426;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .admin-sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+
+        padding: 25px 18px;
+    }
+
+
+    .admin-nav {
+
+        flex: none;
+
+        margin-top: 22px;
+    }
+
+
+    .admin-sidebar-bottom {
+
+        margin-top: 20px;
+
+        padding-top: 0;
+    }
+
+}

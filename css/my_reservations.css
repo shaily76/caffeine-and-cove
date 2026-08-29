@@ -1,0 +1,482 @@
+/* =========================================================
+   CAFFEINE & COVE
+   MY RESERVATIONS PAGE
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.cove-reservation-page {
+
+    min-height: 75vh;
+
+    padding: 55px 20px 70px;
+
+    background: #FFF8F2;
+
+}
+
+
+.cove-reservation-container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.cove-reservation-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.cove-reservation-heading h1 {
+
+    margin: 0 0 8px;
+
+    color: #4A2C1D;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+}
+
+
+.cove-reservation-heading p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   EMPTY RESERVATIONS
+========================================================= */
+
+.cove-no-reservations {
+
+    max-width: 600px;
+
+    margin: 50px auto;
+
+    background: #ffffff;
+
+    border: 1px solid #eadfd6;
+
+    border-radius: 18px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(74, 44, 29, 0.08);
+
+}
+
+
+.cove-no-reservation-icon {
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.cove-no-reservations h2 {
+
+    margin: 0 0 10px;
+
+    color: #4A2C1D;
+
+    font-size: 24px;
+
+}
+
+
+.cove-no-reservations p {
+
+    color: #777;
+
+    line-height: 1.6;
+
+    margin: 0 0 25px;
+
+}
+
+
+/* =========================================================
+   BOOK TABLE BUTTON
+========================================================= */
+
+.cove-book-reservation-btn {
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    background: #4A2C1D;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+
+}
+
+
+.cove-book-reservation-btn:hover {
+
+    background: #8B4513;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   RESERVATION GRID
+========================================================= */
+
+.cove-reservation-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+}
+
+
+/* =========================================================
+   RESERVATION CARD
+========================================================= */
+
+.cove-reservation-card {
+
+    background: #ffffff;
+
+    border: 1px solid #eadfd6;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(74, 44, 29, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.cove-reservation-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 32px
+        rgba(74, 44, 29, 0.12);
+
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.cove-reservation-card-header {
+
+    background: #4A2C1D;
+
+    color: #ffffff;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+.cove-reservation-number {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+.cove-reservation-created {
+
+    font-size: 12px;
+
+    color: #F5E8DA;
+
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.cove-reservation-card-body {
+
+    padding: 22px;
+
+}
+
+
+/* =========================================================
+   DETAILS GRID
+========================================================= */
+
+.cove-reservation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+/* =========================================================
+   DETAIL BOX
+========================================================= */
+
+.cove-reservation-box {
+
+    background: #FFF8F2;
+
+    border: 1px solid #eadfd6;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+}
+
+
+.cove-reservation-label {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.cove-reservation-value {
+
+    display: block;
+
+    color: #4A2C1D;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+
+}
+
+
+/* =========================================================
+   SPECIAL REQUEST
+========================================================= */
+
+.cove-special-request {
+
+    margin-top: 15px;
+
+    padding: 13px;
+
+    background: #FFF8F2;
+
+    border: 1px solid #eadfd6;
+
+    border-radius: 10px;
+
+}
+
+
+.cove-special-request
+.cove-reservation-label {
+
+    margin-bottom: 6px;
+
+}
+
+
+.cove-special-request-text {
+
+    color: #4A2C1D;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.cove-reservation-status {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* PENDING */
+
+.reservation-pending {
+
+    background: #FFF3CD;
+
+    color: #856404;
+
+}
+
+
+/* CONFIRMED */
+
+.reservation-confirmed {
+
+    background: #DFF3E4;
+
+    color: #276738;
+
+}
+
+
+/* COMPLETED */
+
+.reservation-completed {
+
+    background: #E8DDF5;
+
+    color: #5B3A82;
+
+}
+
+
+/* CANCELLED */
+
+.reservation-cancelled {
+
+    background: #F8D7DA;
+
+    color: #842029;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .cove-reservation-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cove-reservation-page {
+
+        padding: 40px 15px 55px;
+
+    }
+
+
+    .cove-reservation-heading h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .cove-reservation-card-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .cove-reservation-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

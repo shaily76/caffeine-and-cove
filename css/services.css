@@ -1,0 +1,677 @@
+/* =========================================================
+   CAFFEINE & COVE
+   SERVICES PAGE
+========================================================= */
+
+:root {
+    --coffee-dark: #4b2b1c;
+    --coffee: #704326;
+    --coffee-light: #9a633c;
+    --cream: #fff8f0;
+    --cream-dark: #f3e4d4;
+    --beige: #ead7c1;
+    --text: #3d2418;
+    --muted: #7d6658;
+    --white: #ffffff;
+}
+
+/* =========================================================
+   SERVICES HERO
+========================================================= */
+
+.cove-services-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 640px;
+
+    background-image: url("../img/services-coffee.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SOFT OVERLAY
+========================================================= */
+
+.services-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 246, 235, 0.96) 0%,
+        rgba(255, 246, 235, 0.90) 35%,
+        rgba(255, 246, 235, 0.25) 62%,
+        rgba(255, 246, 235, 0.02) 100%
+    );
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.services-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 90px 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.services-eyebrow {
+
+    display: block;
+
+    margin-bottom: 24px;
+
+    color: #a95f32;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.services-hero-content h1 {
+
+    margin: 0;
+
+    color: #4b2b1d;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 6vw, 96px);
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    max-width: 650px;
+}
+
+
+.services-hero-content h1 em {
+
+    color: #b56635;
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.services-hero-content p {
+
+    max-width: 560px;
+
+    margin: 35px 0;
+
+    color: #795e50;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.services-main-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 17px 25px;
+
+    background: #59321f;
+
+    color: #ffffff;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+.services-main-button span {
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+.services-main-button:hover {
+
+    background: #7a472b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REMOVE OLD IMAGE CONTAINER
+========================================================= */
+
+.services-hero-image {
+
+    display: none;
+}
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.cove-services-section {
+    padding: 110px 7vw;
+
+    background: var(--cream);
+}
+
+
+/* HEADING */
+
+.services-heading {
+    max-width: 750px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+.services-heading > span {
+    display: block;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #a05b32;
+
+    margin-bottom: 18px;
+}
+
+
+.services-heading h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    line-height: 1;
+
+    color: var(--coffee-dark);
+}
+
+
+.services-heading h2 em {
+    color: #9b603a;
+    font-weight: 500;
+}
+
+
+.services-heading p {
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: var(--muted);
+
+    font-family: "DM Sans", sans-serif;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.service-card {
+    position: relative;
+
+    padding: 38px 32px;
+
+    min-height: 300px;
+
+    background: #fffdf9;
+
+    border: 1px solid #eadbcb;
+
+    border-radius: 20px;
+
+    transition: .35s ease;
+
+    overflow: hidden;
+}
+
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(75, 43, 28, .12);
+}
+
+
+/* =========================================================
+   ALL SERVICE CARDS - SAME COLOR
+========================================================= */
+
+.featured-service {
+    background: #fffdf9;
+
+    color: var(--text);
+
+    border-color: #eadbcb;
+}
+
+
+/* TEXT OF SECOND CARD */
+
+.featured-service h3 {
+    color: var(--coffee-dark);
+}
+
+.featured-service p {
+    color: var(--muted);
+}
+
+.featured-service a {
+    color: var(--coffee);
+}
+
+
+/* NUMBER */
+
+.featured-service .service-number {
+    color: #b69b86;
+}
+
+
+/* ICON */
+
+.featured-service .service-icon {
+    background: #f2e3d3;
+}
+
+/* NUMBER */
+
+.service-number {
+    position: absolute;
+
+    top: 25px;
+    right: 28px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 15px;
+
+    color: #b69b86;
+}
+
+
+/* ICON */
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f2e3d3;
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.service-card h3 {
+    margin: 0 0 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+
+    color: var(--coffee-dark);
+}
+
+
+.service-card p {
+    margin: 0 0 25px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: var(--muted);
+}
+
+
+.service-card a {
+    display: inline-flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    color: var(--coffee);
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.service-card a span {
+    transition: .3s ease;
+}
+
+
+.service-card a:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.services-experience {
+    padding: 100px 10vw;
+
+    background: var(--coffee-dark);
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.experience-left span {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #d9a879;
+}
+
+
+.experience-left h2 {
+    margin: 20px 0 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    line-height: 1;
+}
+
+
+.experience-left h2 em {
+    color: #d49a67;
+
+    font-weight: 500;
+}
+
+
+.experience-right p {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #e8d9cc;
+
+    margin: 0;
+}
+
+
+.experience-line {
+    width: 80px;
+
+    height: 1px;
+
+    background: #c58a5a;
+
+    margin: 30px 0;
+}
+
+
+.experience-right strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.services-cta {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #f3e3d2;
+}
+
+
+.services-cta span {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #9c5c35;
+}
+
+
+.services-cta h2 {
+    margin: 15px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    color: var(--coffee-dark);
+}
+
+
+.services-cta p {
+    margin-bottom: 30px;
+
+    color: var(--muted);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.services-cta a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 28px;
+
+    border-radius: 40px;
+
+    background: var(--coffee-dark);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: .3s ease;
+}
+
+
+.services-cta a:hover {
+    background: var(--coffee);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .cove-services-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .services-hero-content {
+        padding: 80px 8vw;
+    }
+
+    .services-hero-image {
+        height: 450px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-experience {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .services-hero-content h1 {
+        font-size: 58px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cove-services-section {
+        padding: 75px 20px;
+    }
+
+    .services-experience {
+        padding: 75px 25px;
+    }
+
+    .services-hero-image {
+        height: 350px;
+    }
+
+}

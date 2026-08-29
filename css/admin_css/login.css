@@ -1,0 +1,473 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN LOGIN CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    color: #3f2418;
+
+    background: #f7eee5;
+
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.admin-login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf4 0%,
+            #f7eee5 50%,
+            #ead8c6 100%
+        );
+
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.admin-login-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 45px;
+
+    background: #fffdf9;
+
+    border: 1px solid #ead9ca;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(63, 36, 24, 0.13);
+
+}
+
+
+/* =========================================================
+   LOGO AREA
+========================================================= */
+
+.admin-logo {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================================
+   COFFEE ICON
+========================================================= */
+
+.coffee-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4a2c1d;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(74, 44, 29, 0.18);
+
+}
+
+
+/* =========================================================
+   BRAND NAME
+========================================================= */
+
+.admin-logo h1 {
+
+    margin-bottom: 7px;
+
+    color: #4a2c1d;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   ADMIN PANEL TEXT
+========================================================= */
+
+.admin-logo p {
+
+    color: #9a7157;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.login-error {
+
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #efc8c0;
+
+    border-radius: 10px;
+
+    background: #fbe8e4;
+
+    color: #9b3828;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #543223;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-group input {
+
+    width: 100%;
+
+    height: 51px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dfcbbc;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #3f2418;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.form-group input:focus {
+
+    border-color: #8b5735;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139, 87, 53, 0.10);
+
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.form-group input::placeholder {
+
+    color: #b59c8a;
+
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-btn {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    margin-top: 5px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    background: #6f4329;
+
+    color: #ffffff;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.login-btn:hover {
+
+    background: #4a2c1d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(74, 44, 29, 0.18);
+
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.login-btn span {
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.login-btn:hover span {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =========================================================
+   FOOTER TEXT
+========================================================= */
+
+.admin-login-footer {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eadbcd;
+
+    color: #9a7a65;
+
+    font-size: 12px;
+
+    text-align: center;
+
+}
+
+
+.admin-login-footer span {
+
+    margin-right: 5px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .admin-login-page {
+
+        padding: 18px;
+
+    }
+
+
+    .admin-login-card {
+
+        padding: 32px 22px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .admin-logo h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .coffee-icon {
+
+        width: 62px;
+
+        height: 62px;
+
+        font-size: 27px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .admin-login-card {
+
+        padding: 28px 18px;
+
+    }
+
+
+    .admin-logo h1 {
+
+        font-size: 23px;
+
+    }
+
+}

@@ -1,0 +1,708 @@
+/* =========================================================
+   NEW FEEDBACK HERO
+========================================================= */
+
+.feedback-hero-new {
+
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background-image: url("../img/feedback-cafe.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* DARK COFFEE OVERLAY */
+
+.feedback-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(45, 25, 16, 0.72),
+            rgba(45, 25, 16, 0.58)
+        );
+
+}
+
+
+/* HERO CONTENT */
+
+.feedback-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 780px;
+
+    padding: 60px 25px;
+
+}
+
+
+.feedback-hero-label {
+
+    display: block;
+
+    color: #e7bd91;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+}
+
+
+.feedback-hero-content h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 7vw, 92px);
+
+    line-height: .98;
+
+    font-weight: 500;
+
+}
+
+
+.feedback-hero-content h1 em {
+
+    display: block;
+
+    color: #e0a06b;
+
+    font-weight: normal;
+}
+
+
+.feedback-hero-content p {
+
+    max-width: 590px;
+
+    margin: 28px auto 0;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.feedback-hero-line {
+
+    width: 65px;
+
+    height: 1px;
+
+    background: #d5a06e;
+
+    margin: 30px auto 0;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .feedback-hero-new {
+
+        min-height: 430px;
+
+    }
+
+    .feedback-hero-content h1 {
+
+        font-size: 52px;
+
+    }
+
+    .feedback-hero-content p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* =========================================================
+   FEEDBACK SECTION
+========================================================= */
+
+.feedback-section {
+
+    background: #fffaf5;
+
+    padding: 100px 8%;
+}
+
+
+.feedback-wrapper {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .85fr 1.15fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* LEFT */
+
+.feedback-info {
+
+    padding-top: 35px;
+}
+
+
+.feedback-small-title {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #a55c31;
+
+    font-weight: 600;
+}
+
+
+.feedback-info h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 58px;
+
+    line-height: 1;
+
+    color: #4b2819;
+
+    margin: 18px 0 25px;
+}
+
+
+.feedback-info h2 em {
+
+    color: #a75b2d;
+
+    font-weight: normal;
+}
+
+
+.feedback-info > p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #806758;
+
+    max-width: 450px;
+
+    margin-bottom: 45px;
+}
+
+
+/* POINTS */
+
+.feedback-points {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.feedback-point {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.point-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    min-width: 55px;
+
+    border-radius: 50%;
+
+    background: #f0dfcc;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+    color: #63391f;
+}
+
+
+.feedback-point h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    color: #4b2819;
+
+    margin: 0 0 5px;
+}
+
+
+.feedback-point p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #806758;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.feedback-card {
+
+    background: #ffffff;
+
+    border: 1px solid #ead9c9;
+
+    border-radius: 24px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 20px 60px rgba(75, 40, 25, .08);
+}
+
+
+.feedback-card-heading span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #a55c31;
+
+    font-weight: 600;
+}
+
+
+.feedback-card-heading h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    color: #4b2819;
+
+    margin: 10px 0 5px;
+}
+
+
+.feedback-card-heading p {
+
+    color: #806758;
+
+    margin: 0 0 30px;
+}
+
+
+/* MESSAGE */
+
+.feedback-message {
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+
+.feedback-message.success {
+
+    background: #edf7ed;
+
+    color: #3c703c;
+}
+
+
+.feedback-message.error {
+
+    background: #fff0ed;
+
+    color: #a04434;
+}
+
+
+/* FORM */
+
+.feedback-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.feedback-field {
+
+    margin-bottom: 20px;
+}
+
+
+.feedback-field label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #4b2819;
+
+    margin-bottom: 8px;
+}
+
+
+.feedback-field input,
+.feedback-field textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e4d4c5;
+
+    background: #fffaf6;
+
+    border-radius: 10px;
+
+    padding: 14px 16px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #4b2819;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+
+.feedback-field textarea {
+
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+.feedback-field input:focus,
+.feedback-field textarea:focus {
+
+    border-color: #9b5429;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.rating-options {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.rating-option {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: 1px solid #e4d4c5;
+
+    border-radius: 10px;
+
+    background: #fffaf6;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.rating-option input {
+
+    display: none;
+}
+
+
+.rating-option span {
+
+    font-size: 18px;
+
+    color: #d6c5b5;
+}
+
+
+.rating-option small {
+
+    font-size: 9px;
+
+    color: #806758;
+}
+
+
+.rating-option:has(input:checked) {
+
+    background: #63391f;
+
+    border-color: #63391f;
+}
+
+
+.rating-option:has(input:checked) span {
+
+    color: #e4a95e;
+}
+
+
+.rating-option:has(input:checked) small {
+
+    color: white;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.feedback-submit {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #63391f;
+
+    color: white;
+
+    padding: 16px 24px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    transition: .3s;
+}
+
+
+.feedback-submit:hover {
+
+    background: #4b2819;
+
+    transform: translateY(-2px);
+}
+
+
+.feedback-submit span {
+
+    font-size: 20px;
+}
+
+
+.feedback-note {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #9b8576;
+
+    margin: 18px 0 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .feedback-hero {
+
+        padding: 60px 7%;
+
+    }
+
+    .feedback-hero-decoration {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+    .coffee-circle {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+    .coffee-circle span {
+
+        font-size: 80px;
+
+    }
+
+    .feedback-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .feedback-hero {
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 40px;
+
+    }
+
+    .feedback-hero h1 {
+
+        font-size: 55px;
+
+    }
+
+    .feedback-hero-decoration {
+
+        align-self: center;
+
+        margin: 0;
+
+    }
+
+    .feedback-section {
+
+        padding: 60px 5%;
+
+    }
+
+    .feedback-info h2 {
+
+        font-size: 45px;
+
+    }
+
+    .feedback-card {
+
+        padding: 25px;
+
+    }
+
+    .feedback-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+}
