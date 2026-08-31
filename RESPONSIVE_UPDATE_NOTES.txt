@@ -1,0 +1,45 @@
+CAFFEINE & COVE — RESPONSIVE + ADMIN USERS UPDATE
+====================================================
+
+Date: 31 August 2026
+
+MAIN WEBSITE
+------------
+1. include/header.php
+   - Added the project's existing local Bootstrap 4.5.3 stylesheet.
+   - Added the new global css/responsive.css stylesheet.
+   - This makes Bootstrap utilities/grid available across pages that use the common header.
+
+2. css/responsive.css (NEW)
+   - Added global mobile/tablet safety rules.
+   - Prevents horizontal overflow.
+   - Makes images/media fluid.
+   - Stacks major multi-column layouts on tablets/phones.
+   - Improves form/table behavior on small screens.
+   - Keeps the existing Caffeine & Cove visual design; this is a responsive layer, not a redesign.
+
+ADMIN PANEL
+-----------
+3. admin/includes/sidebar.php
+   - Added a visible "Users" item in the AdminLTE sidebar.
+   - It links to admin/user/user.php.
+   - Added active-state highlighting when the Users page is open.
+   - Existing Customers, Orders, Reservations, Messages, etc. are unchanged.
+
+4. admin/user/user.php
+   - Fixed the stylesheet filename from user.css to users.css.
+   - The actual project stylesheet is css/admin_css/users.css.
+
+5. admin/assests/css/admin-theme.css
+   - Added small responsive rules for the AdminLTE content area, cards, tables and user panel.
+
+6. css/admin_css/users.css
+   - Added mobile/table overflow protection where the file exists.
+
+IMPORTANT
+---------
+- No database structure was changed.
+- No ordering/reservation/payment business rules were changed.
+- No cafe branding/colors were redesigned.
+- Existing AdminLTE assets were kept.
+- Sales Analytics was not removed or changed in this update.

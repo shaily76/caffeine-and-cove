@@ -638,3 +638,57 @@ a:hover {
         font-size: 19px;
     }
 }
+
+/* =========================================================
+   23. RESPONSIVE ADMIN PANEL
+========================================================= */
+
+@media (max-width: 991.98px) {
+    .content-header h1 {
+        font-size: 26px;
+    }
+
+    .content {
+        overflow-x: hidden;
+    }
+
+    .card-body {
+        overflow-x: auto;
+    }
+
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content-header {
+        padding: 12px 15px;
+    }
+
+    .content-header .breadcrumb {
+        float: none !important;
+        margin-top: 8px;
+    }
+
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .small-box .inner {
+        padding: 15px;
+    }
+
+    .small-box h3 {
+        font-size: 27px;
+    }
+
+    .small-box p {
+        font-size: 14px;
+    }
+
+    .main-sidebar .user-panel .info a {
+        font-size: 14px;
+    }
+}

@@ -87,10 +87,28 @@ if ($is_logged_in) {
 
 
 <!-- =======================================================
+     BOOTSTRAP 4.5.3
+     Existing local Bootstrap build used by the project.
+     ======================================================= -->
+
+<link
+    rel="stylesheet"
+    href="scss/bootstrap/scss/bootstrap.css"
+>
+
+
+<!-- =======================================================
      HEADER CSS
      ======================================================= -->
 
 <link rel="stylesheet" href="css/header.css">
+
+
+<!-- =======================================================
+     GLOBAL RESPONSIVE CSS
+     ======================================================= -->
+
+<link rel="stylesheet" href="css/responsive.css">
 
 
 <!-- =======================================================

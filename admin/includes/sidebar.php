@@ -451,6 +451,32 @@ if ($messageResult !== false) {
 
 
                 <!-- =================================================
+                     USERS
+                ================================================== -->
+
+                <li class="nav-item">
+
+                    <a
+                        href="<?php echo $adminBase; ?>user/user.php"
+                        class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) === 'user.php') ? 'active' : ''; ?>"
+                    >
+
+                        <i
+                            class="nav-icon fas fa-user-cog"
+                        ></i>
+
+                        <p>
+
+                            Users
+
+                        </p>
+
+                    </a>
+
+                </li>
+
+
+                <!-- =================================================
                      SALES ANALYTICS
                 ================================================== -->
 

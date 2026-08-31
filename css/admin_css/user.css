@@ -1,0 +1,523 @@
+/* =========================================================
+   CAFFEINE & COVE
+   ADMIN - MANAGE USERS
+   user.css
+========================================================= */
+
+
+/* =========================================================
+   USER STAT CARD
+========================================================= */
+
+.user-stat-card {
+    border: 1px solid #ead8c7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(74, 44, 29, 0.06);
+    background: #ffffff;
+}
+
+.user-stat-card .card-body {
+    padding: 20px;
+}
+
+.user-stat-title {
+    margin: 0 0 8px;
+    color: #8a7468;
+    font-size: 14px;
+}
+
+.user-stat-number {
+    margin: 0;
+    color: #3b2418;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.user-stat-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #f3e6d7;
+    color: #7b4728;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   SEARCH CARD
+========================================================= */
+
+.user-search-card {
+    border: 1px solid #ead8c7;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(74, 44, 29, 0.05);
+
+    margin-bottom: 18px;
+}
+
+.user-search-card .card-body {
+    padding: 18px;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.user-search-card .input-group-text {
+    background: #f5f5f5;
+    border-color: #ced4da;
+
+    color: #7b4728;
+
+    min-width: 42px;
+    justify-content: center;
+}
+
+.user-search-card .form-control {
+    height: 38px;
+
+    border-color: #ced4da;
+
+    color: #3b2418;
+}
+
+.user-search-card .form-control::placeholder {
+    color: #8a7468;
+}
+
+.user-search-card .form-control:focus {
+    border-color: #a9794e;
+
+    box-shadow:
+        0 0 0 0.15rem
+        rgba(123, 71, 40, 0.15);
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.btn-user-search {
+    height: 38px;
+
+    background: #3b2418;
+    border-color: #3b2418;
+
+    color: #ffffff;
+
+    border-radius: 4px;
+}
+
+.btn-user-search:hover,
+.btn-user-search:focus {
+    background: #5a3520;
+    border-color: #5a3520;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   USERS TABLE CARD
+========================================================= */
+
+.user-table-card {
+    border: 1px solid #ead8c7;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(74, 44, 29, 0.06);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.user-table-card .card-header {
+    background: #ffffff;
+
+    border-bottom: 1px solid #ead8c7;
+
+    padding: 13px 20px;
+}
+
+.user-table-card .card-title {
+    margin: 0;
+
+    color: #3b2418;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SEARCH BADGE
+========================================================= */
+
+.user-search-badge {
+    background: #d8a15b;
+
+    color: #3b2418;
+
+    padding: 6px 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.user-table {
+    width: 100%;
+
+    margin: 0;
+
+    color: #4a2c1d;
+
+    background: #ffffff;
+}
+
+.user-table thead th {
+    background: #f3e6d7;
+
+    color: #3b2418;
+
+    border-top: 0;
+    border-bottom: 1px solid #d8a15b;
+
+    padding: 13px 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    vertical-align: middle;
+}
+
+.user-table tbody td {
+    padding: 13px 12px;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #6f4730;
+
+    font-size: 14px;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+.user-table tbody tr:hover {
+    background: #fff8f2;
+}
+
+
+/* =========================================================
+   USER INFORMATION
+========================================================= */
+
+.user-info {
+    min-width: 170px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    margin-right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3e6d7;
+
+    color: #7b4728;
+
+    font-size: 14px;
+}
+
+.user-info strong {
+    color: #3b2418;
+}
+
+
+/* =========================================================
+   USERNAME
+========================================================= */
+
+.user-username {
+    color: #7b4728;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.btn-user-delete {
+    width: 34px;
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #dc3545;
+
+    border-radius: 4px;
+
+    color: #dc3545;
+
+    background: transparent;
+}
+
+.btn-user-delete:hover {
+    background: #dc3545;
+
+    color: #ffffff;
+
+    border-color: #dc3545;
+}
+
+
+/* =========================================================
+   TABLE FOOTER
+========================================================= */
+
+.user-table-card .card-footer {
+    background: #f8f8f8;
+
+    border-top: 0;
+
+    padding: 12px 20px;
+}
+
+.user-total-text {
+    color: #8a7468;
+
+    font-size: 13px;
+}
+
+.user-total-text strong {
+    color: #7b4728;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.user-empty-state {
+    color: #8a7468;
+}
+
+.user-empty-state i {
+    color: #9b806c;
+}
+
+.user-empty-state p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   TABLE RESPONSIVE
+========================================================= */
+
+.table-responsive {
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 7px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #b89a82;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .user-table {
+        min-width: 900px;
+    }
+
+    .user-table thead th,
+    .user-table tbody td {
+        padding: 12px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .content-header {
+        padding: 15px 15px 0;
+    }
+
+    .content-header h1 {
+        font-size: 24px;
+    }
+
+    .breadcrumb {
+        float: none !important;
+
+        margin-top: 8px;
+
+        padding-left: 0;
+    }
+
+
+    .content {
+        padding: 0 15px;
+    }
+
+
+    /* STAT CARD */
+
+    .user-stat-card {
+        margin-bottom: 15px;
+    }
+
+
+    /* SEARCH */
+
+    .user-search-card .card-body {
+        padding: 15px;
+    }
+
+    .user-search-card .btn-user-search {
+        margin-top: 8px;
+    }
+
+
+    /* TABLE */
+
+    .user-table {
+        min-width: 900px;
+    }
+
+    .user-table thead th,
+    .user-table tbody td {
+        padding: 11px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* HEADER */
+
+    .user-table-card .card-header {
+        padding: 13px 15px;
+    }
+
+    .user-table-card .card-title {
+        font-size: 16px;
+    }
+
+
+    .user-table-card .card-header > div {
+        align-items: flex-start !important;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .content-header h1 {
+        font-size: 21px;
+    }
+
+    .user-stat-number {
+        font-size: 25px;
+    }
+
+    .user-stat-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .user-table {
+        min-width: 850px;
+    }
+
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .main-sidebar,
+    .main-header,
+    .main-footer,
+    .btn,
+    form,
+    .breadcrumb {
+        display: none !important;
+    }
+
+    .content-wrapper {
+        margin-left: 0 !important;
+    }
+
+    .user-table-card {
+        box-shadow: none !important;
+
+        border: 1px solid #ddd !important;
+    }
+
+}
