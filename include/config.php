@@ -6,11 +6,6 @@
    Local XAMPP + Vercel / TiDB Cloud
 ========================================================= */
 
-
-/* =========================================================
-   DETECT VERCEL
-========================================================= */
-
 $isVercel = (getenv('VERCEL') === '1');
 
 
@@ -65,15 +60,10 @@ if (!$link) {
 
 
 /* =========================================================
-   VERCEL / TIDB CLOUD CONNECTION
+   VERCEL / TIDB CLOUD
 ========================================================= */
 
 if ($isVercel) {
-
-    /*
-     * TiDB Cloud public endpoints require TLS.
-     * MYSQLI_CLIENT_SSL enables the encrypted connection.
-     */
 
     if (
         !mysqli_real_connect(
@@ -96,7 +86,7 @@ if ($isVercel) {
 } else {
 
     /* =====================================================
-       LOCAL XAMPP CONNECTION
+       LOCAL XAMPP
     ===================================================== */
 
     if (
