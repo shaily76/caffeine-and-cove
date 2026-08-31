@@ -3,29 +3,31 @@
 /* =========================================================
    CAFFEINE & COVE
    ADMIN DASHBOARD
-   ========================================================= */
+========================================================= */
 
 
 /* =========================================================
    ADMIN AUTHENTICATION
-   ========================================================= */
+========================================================= */
 
 require_once "admin_auth.php";
 
 
 /* =========================================================
    DATABASE
-   ========================================================= */
+========================================================= */
 
 require_once "../include/config.php";
 
 
 /* =========================================================
    DASHBOARD COUNTS
-   ========================================================= */
+========================================================= */
 
 
-/* TOTAL PRODUCTS */
+/* ---------------------------------------------------------
+   TOTAL PRODUCTS
+--------------------------------------------------------- */
 
 $totalProducts = 0;
 
@@ -38,11 +40,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $totalProducts = (int)$row["total"];
+    $totalProducts = (int) $row["total"];
 }
 
 
-/* TOTAL CUSTOMERS */
+/* ---------------------------------------------------------
+   TOTAL CUSTOMERS / USERS
+--------------------------------------------------------- */
 
 $totalCustomers = 0;
 
@@ -55,11 +59,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $totalCustomers = (int)$row["total"];
+    $totalCustomers = (int) $row["total"];
 }
 
 
-/* TOTAL ORDERS */
+/* ---------------------------------------------------------
+   TOTAL ORDERS
+--------------------------------------------------------- */
 
 $totalOrders = 0;
 
@@ -72,11 +78,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $totalOrders = (int)$row["total"];
+    $totalOrders = (int) $row["total"];
 }
 
 
-/* TOTAL RESERVATIONS */
+/* ---------------------------------------------------------
+   TOTAL RESERVATIONS
+--------------------------------------------------------- */
 
 $totalReservations = 0;
 
@@ -89,16 +97,18 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $totalReservations = (int)$row["total"];
+    $totalReservations = (int) $row["total"];
 }
 
 
 /* =========================================================
    EXTRA STATISTICS
-   ========================================================= */
+========================================================= */
 
 
-/* TODAY SALES */
+/* ---------------------------------------------------------
+   TODAY SALES
+--------------------------------------------------------- */
 
 $todaySales = 0;
 
@@ -116,11 +126,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $todaySales = (float)$row["total_sales"];
+    $todaySales = (float) $row["total_sales"];
 }
 
 
-/* PENDING ORDERS */
+/* ---------------------------------------------------------
+   PENDING ORDERS
+--------------------------------------------------------- */
 
 $pendingOrders = 0;
 
@@ -137,11 +149,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $pendingOrders = (int)$row["total"];
+    $pendingOrders = (int) $row["total"];
 }
 
 
-/* PENDING RESERVATIONS */
+/* ---------------------------------------------------------
+   PENDING RESERVATIONS
+--------------------------------------------------------- */
 
 $pendingReservations = 0;
 
@@ -158,11 +172,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $pendingReservations = (int)$row["total"];
+    $pendingReservations = (int) $row["total"];
 }
 
 
-/* UNREAD MESSAGES */
+/* ---------------------------------------------------------
+   UNREAD MESSAGES
+--------------------------------------------------------- */
 
 $unreadMessages = 0;
 
@@ -179,13 +195,13 @@ if ($result !== false) {
 
     $row = mysqli_fetch_assoc($result);
 
-    $unreadMessages = (int)$row["total"];
+    $unreadMessages = (int) $row["total"];
 }
 
 
 /* =========================================================
    RECENT ORDERS
-   ========================================================= */
+========================================================= */
 
 $recentOrders = mysqli_query(
     $link,
@@ -205,7 +221,7 @@ $recentOrders = mysqli_query(
 
 /* =========================================================
    COMMON HEADER
-   ========================================================= */
+========================================================= */
 
 include "includes/header.php";
 
@@ -238,6 +254,7 @@ include "includes/sidebar.php";
                     </h1>
 
                 </div>
+
 
                 <div class="col-sm-6">
 
@@ -278,7 +295,9 @@ include "includes/sidebar.php";
             <div class="row">
 
 
-                <!-- ORDERS -->
+                <!-- =================================================
+                     TOTAL ORDERS
+                ================================================== -->
 
                 <div class="col-lg-3 col-6">
 
@@ -297,7 +316,9 @@ include "includes/sidebar.php";
                         </div>
 
                         <div class="icon">
+
                             <i class="fas fa-shopping-cart"></i>
+
                         </div>
 
                         <a
@@ -306,6 +327,7 @@ include "includes/sidebar.php";
                         >
 
                             View Orders
+
                             <i class="fas fa-arrow-circle-right"></i>
 
                         </a>
@@ -315,7 +337,9 @@ include "includes/sidebar.php";
                 </div>
 
 
-                <!-- PRODUCTS -->
+                <!-- =================================================
+                     TOTAL PRODUCTS
+                ================================================== -->
 
                 <div class="col-lg-3 col-6">
 
@@ -334,7 +358,9 @@ include "includes/sidebar.php";
                         </div>
 
                         <div class="icon">
+
                             <i class="fas fa-coffee"></i>
+
                         </div>
 
                         <a
@@ -343,6 +369,7 @@ include "includes/sidebar.php";
                         >
 
                             Manage Products
+
                             <i class="fas fa-arrow-circle-right"></i>
 
                         </a>
@@ -352,7 +379,9 @@ include "includes/sidebar.php";
                 </div>
 
 
-                <!-- CUSTOMERS -->
+                <!-- =================================================
+                     TOTAL CUSTOMERS
+                ================================================== -->
 
                 <div class="col-lg-3 col-6">
 
@@ -371,15 +400,18 @@ include "includes/sidebar.php";
                         </div>
 
                         <div class="icon">
+
                             <i class="fas fa-users"></i>
+
                         </div>
 
                         <a
-                            href="customers/customers.php"
+                            href="user/user.php"
                             class="small-box-footer"
                         >
 
-                            View Customers
+                            View Users
+
                             <i class="fas fa-arrow-circle-right"></i>
 
                         </a>
@@ -389,7 +421,9 @@ include "includes/sidebar.php";
                 </div>
 
 
-                <!-- RESERVATIONS -->
+                <!-- =================================================
+                     TOTAL RESERVATIONS
+                ================================================== -->
 
                 <div class="col-lg-3 col-6">
 
@@ -408,7 +442,9 @@ include "includes/sidebar.php";
                         </div>
 
                         <div class="icon">
+
                             <i class="fas fa-calendar-check"></i>
+
                         </div>
 
                         <a
@@ -417,6 +453,7 @@ include "includes/sidebar.php";
                         >
 
                             View Reservations
+
                             <i class="fas fa-arrow-circle-right"></i>
 
                         </a>
@@ -435,7 +472,9 @@ include "includes/sidebar.php";
             <div class="row">
 
 
-                <!-- TODAY SALES -->
+                <!-- =================================================
+                     TODAY SALES
+                ================================================== -->
 
                 <div class="col-lg-3 col-md-6">
 
@@ -471,7 +510,9 @@ include "includes/sidebar.php";
                 </div>
 
 
-                <!-- PENDING ORDERS -->
+                <!-- =================================================
+                     PENDING ORDERS
+                ================================================== -->
 
                 <div class="col-lg-3 col-md-6">
 
@@ -500,7 +541,9 @@ include "includes/sidebar.php";
                 </div>
 
 
-                <!-- PENDING RESERVATIONS -->
+                <!-- =================================================
+                     PENDING RESERVATIONS
+                ================================================== -->
 
                 <div class="col-lg-3 col-md-6">
 
@@ -529,7 +572,9 @@ include "includes/sidebar.php";
                 </div>
 
 
-                <!-- UNREAD MESSAGES -->
+                <!-- =================================================
+                     UNREAD MESSAGES
+                ================================================== -->
 
                 <div class="col-lg-3 col-md-6">
 
@@ -658,7 +703,7 @@ include "includes/sidebar.php";
                                             $orderStatus =
                                                 strtolower(
                                                     trim(
-                                                        (string)$order["status"]
+                                                        (string) $order["status"]
                                                     )
                                                 );
 
@@ -666,38 +711,58 @@ include "includes/sidebar.php";
                                             switch ($orderStatus) {
 
                                                 case "pending":
+
                                                     $statusClass =
                                                         "badge-warning";
+
                                                     break;
+
 
                                                 case "confirmed":
+
                                                     $statusClass =
                                                         "badge-gold";
+
                                                     break;
+
 
                                                 case "preparing":
+
                                                     $statusClass =
                                                         "badge-coffee";
+
                                                     break;
+
 
                                                 case "ready":
+
                                                     $statusClass =
                                                         "badge-success";
+
                                                     break;
+
 
                                                 case "completed":
+
                                                     $statusClass =
                                                         "badge-success";
+
                                                     break;
+
 
                                                 case "cancelled":
+
                                                     $statusClass =
                                                         "badge-danger";
+
                                                     break;
 
+
                                                 default:
+
                                                     $statusClass =
                                                         "badge-secondary";
+
                                                     break;
 
                                             }
@@ -720,20 +785,28 @@ include "includes/sidebar.php";
 
                                             <tr>
 
+
+                                                <!-- ORDER ID -->
+
                                                 <td>
 
                                                     <strong
-                                                        style="color:#7B4728;"
+                                                        style="
+                                                            color:#7B4728;
+                                                        "
                                                     >
 
                                                         #<?php
-                                                        echo (int)$order["id"];
+                                                        echo (int)
+                                                            $order["id"];
                                                         ?>
 
                                                     </strong>
 
                                                 </td>
 
+
+                                                <!-- CUSTOMER -->
 
                                                 <td>
 
@@ -746,15 +819,20 @@ include "includes/sidebar.php";
                                                 </td>
 
 
+                                                <!-- AMOUNT -->
+
                                                 <td>
 
                                                     <strong
-                                                        style="color:#7B4728;"
+                                                        style="
+                                                            color:#7B4728;
+                                                        "
                                                     >
 
                                                         ₹<?php
                                                         echo number_format(
-                                                            (float)$order["total"],
+                                                            (float)
+                                                            $order["total"],
                                                             2
                                                         );
                                                         ?>
@@ -763,6 +841,8 @@ include "includes/sidebar.php";
 
                                                 </td>
 
+
+                                                <!-- STATUS -->
 
                                                 <td>
 
@@ -785,6 +865,8 @@ include "includes/sidebar.php";
                                                 </td>
 
 
+                                                <!-- DATE -->
+
                                                 <td>
 
                                                     <span
@@ -805,18 +887,24 @@ include "includes/sidebar.php";
                                                 </td>
 
 
+                                                <!-- VIEW -->
+
                                                 <td>
 
                                                     <a
-                                                        href="orders/order-details.php?id=<?php echo (int)$order["id"]; ?>"
+                                                        href="orders/order-details.php?id=<?php echo (int) $order["id"]; ?>"
                                                         class="btn btn-sm btn-gold"
+                                                        title="View Order"
                                                     >
 
-                                                        <i class="fas fa-eye"></i>
+                                                        <i
+                                                            class="fas fa-eye"
+                                                        ></i>
 
                                                     </a>
 
                                                 </td>
+
 
                                             </tr>
 
@@ -894,13 +982,26 @@ include "includes/sidebar.php";
                             <div class="row">
 
 
-                                <!-- ADD PRODUCT -->
+                                <!-- =================================================
+                                     ADD PRODUCT
+                                ================================================== -->
 
-                                <div class="col-lg col-md-4 col-sm-6 mb-2">
+                                <div
+                                    class="
+                                        col-lg
+                                        col-md-4
+                                        col-sm-6
+                                        mb-2
+                                    "
+                                >
 
                                     <a
                                         href="products/add-product.php"
-                                        class="btn btn-coffee btn-block"
+                                        class="
+                                            btn
+                                            btn-coffee
+                                            btn-block
+                                        "
                                     >
 
                                         <i class="fas fa-plus mr-2"></i>
@@ -912,16 +1013,35 @@ include "includes/sidebar.php";
                                 </div>
 
 
-                                <!-- ORDERS -->
+                                <!-- =================================================
+                                     ORDERS
+                                ================================================== -->
 
-                                <div class="col-lg col-md-4 col-sm-6 mb-2">
+                                <div
+                                    class="
+                                        col-lg
+                                        col-md-4
+                                        col-sm-6
+                                        mb-2
+                                    "
+                                >
 
                                     <a
                                         href="orders/orders.php"
-                                        class="btn btn-gold btn-block"
+                                        class="
+                                            btn
+                                            btn-gold
+                                            btn-block
+                                        "
                                     >
 
-                                        <i class="fas fa-shopping-cart mr-2"></i>
+                                        <i
+                                            class="
+                                                fas
+                                                fa-shopping-cart
+                                                mr-2
+                                            "
+                                        ></i>
 
                                         View Orders
 
@@ -930,16 +1050,35 @@ include "includes/sidebar.php";
                                 </div>
 
 
-                                <!-- RESERVATIONS -->
+                                <!-- =================================================
+                                     RESERVATIONS
+                                ================================================== -->
 
-                                <div class="col-lg col-md-4 col-sm-6 mb-2">
+                                <div
+                                    class="
+                                        col-lg
+                                        col-md-4
+                                        col-sm-6
+                                        mb-2
+                                    "
+                                >
 
                                     <a
                                         href="reservations/reservations.php"
-                                        class="btn btn-coffee btn-block"
+                                        class="
+                                            btn
+                                            btn-coffee
+                                            btn-block
+                                        "
                                     >
 
-                                        <i class="fas fa-calendar-plus mr-2"></i>
+                                        <i
+                                            class="
+                                                fas
+                                                fa-calendar-plus
+                                                mr-2
+                                            "
+                                        ></i>
 
                                         Reservations
 
@@ -948,16 +1087,72 @@ include "includes/sidebar.php";
                                 </div>
 
 
-                                <!-- SALES -->
+                                <!-- =================================================
+                                     USERS
+                                ================================================== -->
 
-                                <div class="col-lg col-md-4 col-sm-6 mb-2">
+                                <div
+                                    class="
+                                        col-lg
+                                        col-md-4
+                                        col-sm-6
+                                        mb-2
+                                    "
+                                >
+
+                                    <a
+                                        href="user/user.php"
+                                        class="
+                                            btn
+                                            btn-gold
+                                            btn-block
+                                        "
+                                    >
+
+                                        <i
+                                            class="
+                                                fas
+                                                fa-users
+                                                mr-2
+                                            "
+                                        ></i>
+
+                                        Users
+
+                                    </a>
+
+                                </div>
+
+
+                                <!-- =================================================
+                                     SALES ANALYTICS
+                                ================================================== -->
+
+                                <div
+                                    class="
+                                        col-lg
+                                        col-md-4
+                                        col-sm-6
+                                        mb-2
+                                    "
+                                >
 
                                     <a
                                         href="analytics/sales.php"
-                                        class="btn btn-gold btn-block"
+                                        class="
+                                            btn
+                                            btn-coffee
+                                            btn-block
+                                        "
                                     >
 
-                                        <i class="fas fa-chart-line mr-2"></i>
+                                        <i
+                                            class="
+                                                fas
+                                                fa-chart-line
+                                                mr-2
+                                            "
+                                        ></i>
 
                                         Sales Analytics
 
@@ -966,16 +1161,35 @@ include "includes/sidebar.php";
                                 </div>
 
 
-                                <!-- MESSAGES -->
+                                <!-- =================================================
+                                     MESSAGES
+                                ================================================== -->
 
-                                <div class="col-lg col-md-4 col-sm-6 mb-2">
+                                <div
+                                    class="
+                                        col-lg
+                                        col-md-4
+                                        col-sm-6
+                                        mb-2
+                                "
+                                >
 
                                     <a
                                         href="messages/messages.php"
-                                        class="btn btn-coffee btn-block"
+                                        class="
+                                            btn
+                                            btn-gold
+                                            btn-block
+                                        "
                                     >
 
-                                        <i class="fas fa-envelope mr-2"></i>
+                                        <i
+                                            class="
+                                                fas
+                                                fa-envelope
+                                                mr-2
+                                            "
+                                        ></i>
 
                                         Messages
 
@@ -1003,6 +1217,10 @@ include "includes/sidebar.php";
 
 
 <?php
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 include "includes/footer.php";
 
