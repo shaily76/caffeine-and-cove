@@ -3,6 +3,7 @@
 /* =========================================================
    CAFFEINE & COVE
    USER REGISTRATION PROCESS
+   Local XAMPP + Vercel / TiDB Cloud
 ========================================================= */
 
 session_start();
@@ -17,7 +18,6 @@ require_once "include/config.php";
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
     header("Location: register.php");
-
     exit;
 
 }
@@ -28,20 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 ========================================================= */
 
 $full_name = trim($_POST["full_name"] ?? "");
-
-$username = trim($_POST["username"] ?? "");
-
-$email = trim($_POST["email"] ?? "");
-
-$mobile = trim($_POST["mobile"] ?? "");
+$username  = trim($_POST["username"] ?? "");
+$email     = trim($_POST["email"] ?? "");
+$mobile    = trim($_POST["mobile"] ?? "");
 
 $password = $_POST["password"] ?? "";
-
 $confirm_password = $_POST["confirm_password"] ?? "";
 
 
 /* =========================================================
-   VALIDATION
+   BASIC VALIDATION
 ========================================================= */
 
 if (
@@ -57,7 +53,6 @@ if (
         "Please fill in all required fields.";
 
     header("Location: register.php");
-
     exit;
 
 }
@@ -73,7 +68,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         "Please enter a valid email address.";
 
     header("Location: register.php");
-
     exit;
 
 }
@@ -89,13 +83,18 @@ $mobile_clean = preg_replace(
     $mobile
 );
 
-if (strlen(preg_replace("/[^0-9]/", "", $mobile_clean)) < 10) {
+$mobile_digits = preg_replace(
+    "/[^0-9]/",
+    "",
+    $mobile_clean
+);
+
+if (strlen($mobile_digits) < 10) {
 
     $_SESSION["register_error"] =
         "Please enter a valid mobile number.";
 
     header("Location: register.php");
-
     exit;
 
 }
@@ -111,7 +110,6 @@ if (strlen($password) < 6) {
         "Password must contain at least 6 characters.";
 
     header("Location: register.php");
-
     exit;
 
 }
@@ -123,7 +121,6 @@ if ($password !== $confirm_password) {
         "Passwords do not match.";
 
     header("Location: register.php");
-
     exit;
 
 }
@@ -142,18 +139,15 @@ $sql = "
 
 $stmt = mysqli_prepare($link, $sql);
 
-
 if (!$stmt) {
 
     $_SESSION["register_error"] =
         "Unable to process registration.";
 
     header("Location: register.php");
-
     exit;
 
 }
-
 
 mysqli_stmt_bind_param(
     $stmt,
@@ -161,11 +155,9 @@ mysqli_stmt_bind_param(
     $username
 );
 
-
 mysqli_stmt_execute($stmt);
 
 mysqli_stmt_store_result($stmt);
-
 
 if (mysqli_stmt_num_rows($stmt) > 0) {
 
@@ -175,11 +167,9 @@ if (mysqli_stmt_num_rows($stmt) > 0) {
         "Username already exists.";
 
     header("Location: register.php");
-
     exit;
 
 }
-
 
 mysqli_stmt_close($stmt);
 
@@ -197,18 +187,15 @@ $sql = "
 
 $stmt = mysqli_prepare($link, $sql);
 
-
 if (!$stmt) {
 
     $_SESSION["register_error"] =
         "Unable to process registration.";
 
     header("Location: register.php");
-
     exit;
 
 }
-
 
 mysqli_stmt_bind_param(
     $stmt,
@@ -216,11 +203,9 @@ mysqli_stmt_bind_param(
     $email
 );
 
-
 mysqli_stmt_execute($stmt);
 
 mysqli_stmt_store_result($stmt);
-
 
 if (mysqli_stmt_num_rows($stmt) > 0) {
 
@@ -230,11 +215,9 @@ if (mysqli_stmt_num_rows($stmt) > 0) {
         "Email address is already registered.";
 
     header("Location: register.php");
-
     exit;
 
 }
-
 
 mysqli_stmt_close($stmt);
 
@@ -250,12 +233,42 @@ $hashed_password = password_hash(
 
 
 /* =========================================================
+   GENERATE NEXT USER ID
+========================================================= */
+
+$sql = "
+    SELECT COALESCE(MAX(id), 0) + 1 AS next_id
+    FROM users
+";
+
+$result = mysqli_query(
+    $link,
+    $sql
+);
+
+if ($result === false) {
+
+    $_SESSION["register_error"] =
+        "Unable to create user ID.";
+
+    header("Location: register.php");
+    exit;
+
+}
+
+$row = mysqli_fetch_assoc($result);
+
+$new_user_id = (int) $row["next_id"];
+
+
+/* =========================================================
    INSERT USER
 ========================================================= */
 
 $sql = "
     INSERT INTO users
     (
+        id,
         full_name,
         username,
         email,
@@ -263,12 +276,13 @@ $sql = "
         password
     )
     VALUES
-    (?, ?, ?, ?, ?)
+    (?, ?, ?, ?, ?, ?)
 ";
 
-
-$stmt = mysqli_prepare($link, $sql);
-
+$stmt = mysqli_prepare(
+    $link,
+    $sql
+);
 
 if (!$stmt) {
 
@@ -276,15 +290,19 @@ if (!$stmt) {
         "Registration failed. Please try again.";
 
     header("Location: register.php");
-
     exit;
 
 }
 
 
+/* =========================================================
+   BIND VALUES
+========================================================= */
+
 mysqli_stmt_bind_param(
     $stmt,
-    "sssss",
+    "isssss",
+    $new_user_id,
     $full_name,
     $username,
     $email,
@@ -293,19 +311,18 @@ mysqli_stmt_bind_param(
 );
 
 
+/* =========================================================
+   EXECUTE
+========================================================= */
+
 if (mysqli_stmt_execute($stmt)) {
 
     mysqli_stmt_close($stmt);
-
-    /* ==============================================
-       REGISTRATION SUCCESS
-    ============================================== */
 
     $_SESSION["register_success"] =
         "Account created successfully. Please login.";
 
     header("Location: login.php");
-
     exit;
 
 }
@@ -315,13 +332,14 @@ if (mysqli_stmt_execute($stmt)) {
    INSERT ERROR
 ========================================================= */
 
+$error_message = mysqli_stmt_error($stmt);
+
 mysqli_stmt_close($stmt);
 
 $_SESSION["register_error"] =
-    "Registration failed. Please try again.";
+    "Registration failed: " . $error_message;
 
 header("Location: register.php");
-
 exit;
 
 ?>
