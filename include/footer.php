@@ -19,17 +19,6 @@
                 and a cozy place to call your own.
             </p>
 
-            <!-- <div class="footer-social">
-
-                <a href="#" aria-label="Instagram">
-                    Instagram
-                </a>
-
-                <a href="#" aria-label="Facebook">
-                    Facebook
-                </a>
-
-            </div> -->
 
         </div>
 
@@ -82,7 +71,7 @@
             </p>
 
             <p>
-                +91 98765 43210
+                +91 9999997777
             </p>
 
             <p>
